@@ -17,6 +17,7 @@ Step-by-step solutions (LaTeX) to a university **Linear Algebra** tutorial book.
 | 1 | Basic matrices, row echelon form and rank |
 | 2 | Homogeneous / non-homogeneous systems, traffic flow, circuits |
 | 3 | Subspaces of vector spaces |
+| 4 | Tutorial No. 4: Basis, Dimension, Row Space, Column Space and Null Space |
 | 5 | Inner product, norm, distance, angle, orthogonality |
 | 6 | Gram--Schmidt process, least squares |
 | 7 | Linear transformations, kernel and range, rank--nullity |
@@ -26,7 +27,7 @@ Step-by-step solutions (LaTeX) to a university **Linear Algebra** tutorial book.
 | 11 | Orthogonal diagonalization, quadratic forms |
 | 12 | Singular value decomposition |
 
-(Tutorials 4 is not in this collection.)
+
 
 ## Build from source
 
