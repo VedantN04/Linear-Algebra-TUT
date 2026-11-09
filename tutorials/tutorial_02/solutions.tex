@@ -1,0 +1,230 @@
+% Tutorial 2 solutions -- fix errors directly in this file.
+\subsection*{Solutions --- Tutorial No. 2}
+\medskip\noindent\textbf{Q.1  Non-homogeneous systems}\par\smallskip
+
+\noindent\textbf{(1)} Augmented matrix:
+\begin{align*}
+[A|b] &= \left(\begin{array}{ccc|c}5 & 3 & 7 & 4 \\ 3 & 26 & 2 & 9 \\ 7 & 2 & 10 & 5\end{array}\right) \\
+&\xrightarrow{\substack{R_2\to 5R_2-3R_1\\ R_3\to 5R_3-7R_1}} \left(\begin{array}{ccc|c}5 & 3 & 7 & 4 \\ 0 & 121 & -11 & 33 \\ 0 & -11 & 1 & -3\end{array}\right) \\
+&\xrightarrow{\substack{R_3\to 11R_3+R_2}} \left(\begin{array}{ccc|c}5 & 3 & 7 & 4 \\ 0 & 121 & -11 & 33 \\ 0 & 0 & 0 & 0\end{array}\right)
+\end{align*}
+rank$(A)=$ rank$[A|b]=2$, unknowns $=3$ $\Rightarrow$ infinitely many solutions. Solution: $x=\frac{7}{11} - \frac{16 t}{11}, \quad y=\frac{t}{11} + \frac{3}{11}, \quad z=t$, i.e. \[ \mathbf{x}=\begin{pmatrix}\frac{7}{11} \\ \frac{3}{11} \\ 0\end{pmatrix} + t\begin{pmatrix}- \frac{16}{11} \\ \frac{1}{11} \\ 1\end{pmatrix}, \quad t\in\mathbb{R}. \]
+
+\noindent\textbf{(2)} Augmented matrix:
+\begin{align*}
+[A|b] &= \left(\begin{array}{ccc|c}3 & 1 & 2 & 3 \\ 2 & -3 & -1 & -3 \\ 1 & 2 & 1 & 4\end{array}\right) \\
+&\xrightarrow{\substack{R_2\to 3R_2-2R_1\\ R_3\to 3R_3-R_1}} \left(\begin{array}{ccc|c}3 & 1 & 2 & 3 \\ 0 & -11 & -7 & -15 \\ 0 & 5 & 1 & 9\end{array}\right) \\
+&\xrightarrow{\substack{R_3\to 11R_3+5R_2}} \left(\begin{array}{ccc|c}3 & 1 & 2 & 3 \\ 0 & -11 & -7 & -15 \\ 0 & 0 & -24 & 24\end{array}\right)
+\end{align*}
+rank$(A)=$ rank$[A|b]=3$, unknowns $=3$ $\Rightarrow$ unique solution. Solution: $x=1, \quad y=2, \quad z=-1$ (unique solution)
+
+\noindent\textbf{(3)} Augmented matrix:
+\begin{align*}
+[A|b] &= \left(\begin{array}{ccc|c}1 & 2 & 2 & 1 \\ 2 & 2 & 3 & 3 \\ 1 & -1 & 3 & 5\end{array}\right) \\
+&\xrightarrow{\substack{R_2\to R_2-2R_1\\ R_3\to R_3-R_1}} \left(\begin{array}{ccc|c}1 & 2 & 2 & 1 \\ 0 & -2 & -1 & 1 \\ 0 & -3 & 1 & 4\end{array}\right) \\
+&\xrightarrow{\substack{R_3\to 2R_3-3R_2}} \left(\begin{array}{ccc|c}1 & 2 & 2 & 1 \\ 0 & -2 & -1 & 1 \\ 0 & 0 & 5 & 5\end{array}\right)
+\end{align*}
+rank$(A)=$ rank$[A|b]=3$, unknowns $=3$ $\Rightarrow$ unique solution. Solution: $x=1, \quad y=-1, \quad z=1$ (unique solution)
+
+\noindent\textbf{(4)} Augmented matrix:
+\begin{align*}
+[A|b] &= \left(\begin{array}{ccc|c}2 & 0 & 1 & 4 \\ 1 & -2 & 2 & 7 \\ 3 & 2 & 0 & 1\end{array}\right) \\
+&\xrightarrow{\substack{R_2\to 2R_2-R_1\\ R_3\to 2R_3-3R_1}} \left(\begin{array}{ccc|c}2 & 0 & 1 & 4 \\ 0 & -4 & 3 & 10 \\ 0 & 4 & -3 & -10\end{array}\right) \\
+&\xrightarrow{\substack{R_3\to R_3+R_2}} \left(\begin{array}{ccc|c}2 & 0 & 1 & 4 \\ 0 & -4 & 3 & 10 \\ 0 & 0 & 0 & 0\end{array}\right)
+\end{align*}
+rank$(A)=$ rank$[A|b]=2$, unknowns $=3$ $\Rightarrow$ infinitely many solutions. Solution: $x=2 - \frac{t}{2}, \quad y=\frac{3 t}{4} - \frac{5}{2}, \quad z=t$, i.e. \[ \mathbf{x}=\begin{pmatrix}2 \\ - \frac{5}{2} \\ 0\end{pmatrix} + t\begin{pmatrix}- \frac{1}{2} \\ \frac{3}{4} \\ 1\end{pmatrix}, \quad t\in\mathbb{R}. \]
+
+\noindent\textbf{(5)} Augmented matrix:
+\begin{align*}
+[A|b] &= \left(\begin{array}{ccc|c}4 & -2 & 6 & 8 \\ 1 & 1 & -3 & -1 \\ 15 & -3 & 9 & 21\end{array}\right) \\
+&\xrightarrow{\substack{R_2\to 4R_2-R_1\\ R_3\to 4R_3-15R_1}} \left(\begin{array}{ccc|c}4 & -2 & 6 & 8 \\ 0 & 6 & -18 & -12 \\ 0 & 18 & -54 & -36\end{array}\right) \\
+&\xrightarrow{\substack{R_3\to R_3-3R_2}} \left(\begin{array}{ccc|c}4 & -2 & 6 & 8 \\ 0 & 6 & -18 & -12 \\ 0 & 0 & 0 & 0\end{array}\right)
+\end{align*}
+rank$(A)=$ rank$[A|b]=2$, unknowns $=3$ $\Rightarrow$ infinitely many solutions. Solution: $x=1, \quad y=3 t - 2, \quad z=t$, i.e. \[ \mathbf{x}=\begin{pmatrix}1 \\ -2 \\ 0\end{pmatrix} + t\begin{pmatrix}0 \\ 3 \\ 1\end{pmatrix}, \quad t\in\mathbb{R}. \]
+
+\noindent\textbf{(6)} Augmented matrix:
+\begin{align*}
+[A|b] &= \left(\begin{array}{ccc|c}2 & -3 & -1 & 3 \\ 1 & 2 & -1 & 4 \\ 5 & -4 & -3 & -2\end{array}\right) \\
+&\xrightarrow{\substack{R_2\to 2R_2-R_1\\ R_3\to 2R_3-5R_1}} \left(\begin{array}{ccc|c}2 & -3 & -1 & 3 \\ 0 & 7 & -1 & 5 \\ 0 & 7 & -1 & -19\end{array}\right) \\
+&\xrightarrow{\substack{R_3\to R_3-R_2}} \left(\begin{array}{ccc|c}2 & -3 & -1 & 3 \\ 0 & 7 & -1 & 5 \\ 0 & 0 & 0 & -24\end{array}\right)
+\end{align*}
+rank$(A)=2\neq$ rank$[A|b]=3$ $\Rightarrow$ the system is \textbf{inconsistent (no solution)}.
+
+\noindent\textbf{(7)} Augmented matrix:
+\begin{align*}
+[A|b] &= \left(\begin{array}{ccc|c}2 & -1 & 1 & 9 \\ 3 & -1 & 1 & 6 \\ 4 & -1 & 2 & 7 \\ -1 & 1 & -1 & 4\end{array}\right) \\
+&\xrightarrow{\substack{R_2\to 2R_2-3R_1\\ R_3\to R_3-2R_1\\ R_4\to 2R_4+R_1}} \left(\begin{array}{ccc|c}2 & -1 & 1 & 9 \\ 0 & 1 & -1 & -15 \\ 0 & 1 & 0 & -11 \\ 0 & 1 & -1 & 17\end{array}\right) \\
+&\xrightarrow{\substack{R_3\to R_3-R_2\\ R_4\to R_4-R_2}} \left(\begin{array}{ccc|c}2 & -1 & 1 & 9 \\ 0 & 1 & -1 & -15 \\ 0 & 0 & 1 & 4 \\ 0 & 0 & 0 & 32\end{array}\right)
+\end{align*}
+rank$(A)=3\neq$ rank$[A|b]=4$ $\Rightarrow$ the system is \textbf{inconsistent (no solution)}.
+
+\noindent\textbf{(8)} Augmented matrix:
+\begin{align*}
+[A|b] &= \left(\begin{array}{cccc|c}2 & 0 & 0 & -4 & -10 \\ 0 & 3 & 3 & 0 & 0 \\ 0 & 0 & 1 & 4 & -1 \\ -3 & 2 & 3 & 1 & 5\end{array}\right) \\
+&\xrightarrow{\substack{R_4\to 2R_4+3R_1}} \left(\begin{array}{cccc|c}2 & 0 & 0 & -4 & -10 \\ 0 & 3 & 3 & 0 & 0 \\ 0 & 0 & 1 & 4 & -1 \\ 0 & 4 & 6 & -10 & -20\end{array}\right) \\
+&\xrightarrow{\substack{R_4\to 3R_4-4R_2}} \left(\begin{array}{cccc|c}2 & 0 & 0 & -4 & -10 \\ 0 & 3 & 3 & 0 & 0 \\ 0 & 0 & 1 & 4 & -1 \\ 0 & 0 & 6 & -30 & -60\end{array}\right) \\
+&\xrightarrow{\substack{R_4\to R_4-6R_3}} \left(\begin{array}{cccc|c}2 & 0 & 0 & -4 & -10 \\ 0 & 3 & 3 & 0 & 0 \\ 0 & 0 & 1 & 4 & -1 \\ 0 & 0 & 0 & -54 & -54\end{array}\right)
+\end{align*}
+rank$(A)=$ rank$[A|b]=4$, unknowns $=4$ $\Rightarrow$ unique solution. Solution: $x=-3, \quad y=5, \quad z=-5, \quad w=1$ (unique solution)
+\medskip\noindent\textbf{Q.2  Homogeneous systems}\par\smallskip
+
+\noindent\textbf{(1)}
+\begin{align*}
+A &= \begin{pmatrix}1 & 1 & 2 \\ 1 & 2 & 3 \\ 1 & 3 & 4\end{pmatrix} \\
+&\xrightarrow{\substack{R_2\to R_2-R_1\\ R_3\to R_3-R_1}} \begin{pmatrix}1 & 1 & 2 \\ 0 & 1 & 1 \\ 0 & 2 & 2\end{pmatrix} \\
+&\xrightarrow{\substack{R_3\to R_3-2R_2}} \begin{pmatrix}1 & 1 & 2 \\ 0 & 1 & 1 \\ 0 & 0 & 0\end{pmatrix}
+\end{align*}
+rank $=2<3$ $\Rightarrow$ non-trivial solutions exist (1 free variable(s)): $x=- t, \quad y=- t, \quad z=t$, i.e. \[ \mathbf{x}=t\begin{pmatrix}-1 \\ -1 \\ 1\end{pmatrix}, \quad t\in\mathbb{R}. \]
+
+\noindent\textbf{(2)}
+\begin{align*}
+A &= \begin{pmatrix}1 & 2 & 3 & 1 \\ 1 & 1 & -1 & -1 \\ 3 & -1 & 2 & 3\end{pmatrix} \\
+&\xrightarrow{\substack{R_2\to R_2-R_1\\ R_3\to R_3-3R_1}} \begin{pmatrix}1 & 2 & 3 & 1 \\ 0 & -1 & -4 & -2 \\ 0 & -7 & -7 & 0\end{pmatrix} \\
+&\xrightarrow{\substack{R_3\to R_3-7R_2}} \begin{pmatrix}1 & 2 & 3 & 1 \\ 0 & -1 & -4 & -2 \\ 0 & 0 & 21 & 14\end{pmatrix}
+\end{align*}
+rank $=3<4$ $\Rightarrow$ non-trivial solutions exist (1 free variable(s)): $x_1=- \frac{t}{3}, \quad x_2=\frac{2 t}{3}, \quad x_3=- \frac{2 t}{3}, \quad x_4=t$, i.e. \[ \mathbf{x}=t\begin{pmatrix}- \frac{1}{3} \\ \frac{2}{3} \\ - \frac{2}{3} \\ 1\end{pmatrix}, \quad t\in\mathbb{R}. \]
+
+\noindent\textbf{(3)}
+\begin{align*}
+A &= \begin{pmatrix}1 & 2 & 3 \\ 2 & 3 & 1 \\ 4 & 5 & 4 \\ 1 & 1 & -2\end{pmatrix} \\
+&\xrightarrow{\substack{R_2\to R_2-2R_1\\ R_3\to R_3-4R_1\\ R_4\to R_4-R_1}} \begin{pmatrix}1 & 2 & 3 \\ 0 & -1 & -5 \\ 0 & -3 & -8 \\ 0 & -1 & -5\end{pmatrix} \\
+&\xrightarrow{\substack{R_3\to R_3-3R_2\\ R_4\to R_4-R_2}} \begin{pmatrix}1 & 2 & 3 \\ 0 & -1 & -5 \\ 0 & 0 & 7 \\ 0 & 0 & 0\end{pmatrix}
+\end{align*}
+rank $=3=$ number of unknowns $\Rightarrow$ only the trivial solution: all unknowns $=0$.
+
+\noindent\textbf{(4)}
+\begin{align*}
+A &= \begin{pmatrix}3 & 4 & -1 & -9 \\ 2 & 3 & 2 & -3 \\ 2 & 1 & -14 & -12 \\ 1 & 3 & 13 & 3\end{pmatrix} \\
+&\xrightarrow{\substack{R_2\to 3R_2-2R_1\\ R_3\to 3R_3-2R_1\\ R_4\to 3R_4-R_1}} \begin{pmatrix}3 & 4 & -1 & -9 \\ 0 & 1 & 8 & 9 \\ 0 & -5 & -40 & -18 \\ 0 & 5 & 40 & 18\end{pmatrix} \\
+&\xrightarrow{\substack{R_3\to R_3+5R_2\\ R_4\to R_4-5R_2}} \begin{pmatrix}3 & 4 & -1 & -9 \\ 0 & 1 & 8 & 9 \\ 0 & 0 & 0 & 27 \\ 0 & 0 & 0 & -27\end{pmatrix} \\
+&\xrightarrow{\substack{R_4\to R_4+R_3}} \begin{pmatrix}3 & 4 & -1 & -9 \\ 0 & 1 & 8 & 9 \\ 0 & 0 & 0 & 27 \\ 0 & 0 & 0 & 0\end{pmatrix}
+\end{align*}
+rank $=3<4$ $\Rightarrow$ non-trivial solutions exist (1 free variable(s)): $x_1=11 t, \quad x_2=- 8 t, \quad x_3=t, \quad x_4=0$, i.e. \[ \mathbf{x}=t\begin{pmatrix}11 \\ -8 \\ 1 \\ 0\end{pmatrix}, \quad t\in\mathbb{R}. \]
+\medskip\noindent\textbf{Q.3  Eigen-type system}\par\smallskip
+The system is $(A-\lambda I)\mathbf{x}=\mathbf 0$ with $A=\begin{pmatrix}2&-2&1\\2&-3&2\\-1&2&0\end{pmatrix}$. A non-trivial solution exists iff $\det(A-\lambda I)=0$.
+\[ \det(A-\lambda I)=- \left(\lambda - 1\right)^{2} \left(\lambda + 3\right)=0 \]
+Expanded: $- \lambda^{3} - \lambda^{2} + 5 \lambda - 3=0$, hence $\lambda=1$ or $\lambda=-3$ only.
+\noindent\emph{$\lambda=1$:}
+\begin{align*}
+A-\lambda I &= \begin{pmatrix}1 & -2 & 1 \\ 2 & -4 & 2 \\ -1 & 2 & -1\end{pmatrix} \\
+&\xrightarrow{\substack{R_2\to R_2-2R_1\\ R_3\to R_3+R_1}} \begin{pmatrix}1 & -2 & 1 \\ 0 & 0 & 0 \\ 0 & 0 & 0\end{pmatrix}
+\end{align*}
+General solution: $x_1=- s + 2 t, \quad x_2=t, \quad x_3=s$, i.e. \[ \mathbf{x}=t\begin{pmatrix}2 \\ 1 \\ 0\end{pmatrix} + s\begin{pmatrix}-1 \\ 0 \\ 1\end{pmatrix}, \quad t, s\in\mathbb{R}. \]
+\noindent\emph{$\lambda=-3$:}
+\begin{align*}
+A-\lambda I &= \begin{pmatrix}5 & -2 & 1 \\ 2 & 0 & 2 \\ -1 & 2 & 3\end{pmatrix} \\
+&\xrightarrow{\substack{R_2\to 5R_2-2R_1\\ R_3\to 5R_3+R_1}} \begin{pmatrix}5 & -2 & 1 \\ 0 & 4 & 8 \\ 0 & 8 & 16\end{pmatrix} \\
+&\xrightarrow{\substack{R_3\to R_3-2R_2}} \begin{pmatrix}5 & -2 & 1 \\ 0 & 4 & 8 \\ 0 & 0 & 0\end{pmatrix}
+\end{align*}
+General solution: $x_1=- t, \quad x_2=- 2 t, \quad x_3=t$, i.e. \[ \mathbf{x}=t\begin{pmatrix}-1 \\ -2 \\ 1\end{pmatrix}, \quad t\in\mathbb{R}. \]
+\medskip\noindent\textbf{Q.4  Non-trivial solutions}\par\smallskip
+
+\noindent\textbf{(1)} $\det\begin{pmatrix}\lambda-2&1\\1&\lambda-2\end{pmatrix}=\left(\lambda - 3\right) \left(\lambda - 1\right)=0\Rightarrow\lambda=1,\,3$.
+\\ $\lambda=1$: $x=t, \quad y=t$, i.e. \[ \mathbf{x}=t\begin{pmatrix}1 \\ 1\end{pmatrix}, \quad t\in\mathbb{R}. \]
+\\ $\lambda=3$: $x=- t, \quad y=t$, i.e. \[ \mathbf{x}=t\begin{pmatrix}-1 \\ 1\end{pmatrix}, \quad t\in\mathbb{R}. \]
+
+\noindent\textbf{(2)} Coefficient matrix $\begin{pmatrix}3&1&-\lambda\\4&-2&-3\\2\lambda&4&-\lambda\end{pmatrix}$; $\det=- 4 \left(\lambda^{2} + 3 \lambda - 9\right)=0\Rightarrow\lambda=- \frac{3}{2} + \frac{3 \sqrt{5}}{2}, - \frac{3 \sqrt{5}}{2} - \frac{3}{2}$.
+\noindent\emph{$\lambda=- \frac{3}{2} + \frac{3 \sqrt{5}}{2}$ ($1.854$):} (row reduction involves surds, so the null space is given directly; rank $=2$)
+Solution: $x=\frac{3 \sqrt{5} t}{10}, \quad y=t \left(- \frac{3}{2} + \frac{3 \sqrt{5}}{5}\right), \quad z=t$, i.e. \[ \mathbf{x}=t\begin{pmatrix}\frac{3 \sqrt{5}}{10} \\ - \frac{3}{2} + \frac{3 \sqrt{5}}{5} \\ 1\end{pmatrix}, \quad t\in\mathbb{R}. \]
+\noindent\emph{$\lambda=- \frac{3 \sqrt{5}}{2} - \frac{3}{2}$ ($-4.854$):} (row reduction involves surds, so the null space is given directly; rank $=2$)
+Solution: $x=- \frac{3 \sqrt{5} t}{10}, \quad y=t \left(- \frac{3}{2} - \frac{3 \sqrt{5}}{5}\right), \quad z=t$, i.e. \[ \mathbf{x}=t\begin{pmatrix}- \frac{3 \sqrt{5}}{10} \\ - \frac{3}{2} - \frac{3 \sqrt{5}}{5} \\ 1\end{pmatrix}, \quad t\in\mathbb{R}. \]
+\medskip\noindent\textbf{Q.5  Values of $k$ with no unique solution}\par\smallskip
+$\det A=- \left(k - 1\right)^{2} \left(k + 2\right)$.
+For $k\ne -2 , k\ne 1$: $\det A\neq0$, rank $=$ rank$[A|b]=3$ $\Rightarrow$ \textbf{unique solution}.
+\noindent\emph{Case $k=-2$:}
+\begin{align*}
+[A|b] &= \left(\begin{array}{ccc|c}1 & 1 & -2 & 3 \\ 1 & -2 & 1 & 2 \\ -2 & 1 & 1 & 1\end{array}\right) \\
+&\xrightarrow{\substack{R_2\to R_2-R_1\\ R_3\to R_3+2R_1}} \left(\begin{array}{ccc|c}1 & 1 & -2 & 3 \\ 0 & -3 & 3 & -1 \\ 0 & 3 & -3 & 7\end{array}\right) \\
+&\xrightarrow{\substack{R_3\to R_3+R_2}} \left(\begin{array}{ccc|c}1 & 1 & -2 & 3 \\ 0 & -3 & 3 & -1 \\ 0 & 0 & 0 & 6\end{array}\right)
+\end{align*}
+Here rank$A=2<$ rank$[A|b]$ $\Rightarrow$ \textbf{no solution}.
+\noindent\emph{Case $k=1$:}
+\begin{align*}
+[A|b] &= \left(\begin{array}{ccc|c}1 & 1 & 1 & 3 \\ 1 & 1 & 1 & 2 \\ 1 & 1 & 1 & 1\end{array}\right) \\
+&\xrightarrow{\substack{R_2\to R_2-R_1\\ R_3\to R_3-R_1}} \left(\begin{array}{ccc|c}1 & 1 & 1 & 3 \\ 0 & 0 & 0 & -1 \\ 0 & 0 & 0 & -2\end{array}\right)
+\end{align*}
+Here rank$A=1<$ rank$[A|b]$ $\Rightarrow$ \textbf{no solution}.
+So the system fails to have a unique solution exactly for $k=1$ and $k=-2$ (in both cases it has no solution).
+\medskip\noindent\textbf{Q.6  Investigate $\mu$ and $\lambda$}\par\smallskip
+
+\noindent\textbf{(1)}
+$\det A=3 \left(\lambda - 8\right)$.
+For $\lambda\ne 8$: $\det A\neq0$, rank $=$ rank$[A|b]=3$ $\Rightarrow$ \textbf{unique solution}.
+\noindent\emph{Case $\lambda=8$:}
+\begin{align*}
+[A|b] &= \left(\begin{array}{ccc|c}2 & -1 & 3 & 2 \\ 1 & 1 & 2 & 2 \\ 5 & -1 & 8 & \mu\end{array}\right) \\
+&\xrightarrow{\substack{R_2\to 2R_2-R_1\\ R_3\to 2R_3-5R_1}} \left(\begin{array}{ccc|c}2 & -1 & 3 & 2 \\ 0 & 3 & 1 & 2 \\ 0 & 3 & 1 & 2 \mu - 10\end{array}\right) \\
+&\xrightarrow{\substack{R_3\to R_3-R_2}} \left(\begin{array}{ccc|c}2 & -1 & 3 & 2 \\ 0 & 3 & 1 & 2 \\ 0 & 0 & 0 & 2 \mu - 12\end{array}\right)
+\end{align*}
+Here rank$A=2<3$. The last row gives $2 \mu - 12=0$. So if $\mu=6$: rank$A=$rank$[A|b]=2$ $\Rightarrow$ \textbf{infinitely many solutions}; if $\mu\neq 6$: rank$A<$rank$[A|b]$ $\Rightarrow$ \textbf{no solution}.
+\[ \text{(i) no solution: }\lambda=8,\ \mu\neq 6;\quad \text{(ii) unique: }\lambda\neq 8;\quad \text{(iii) infinitely many: }\lambda=8,\ \mu=6 \]
+
+\noindent\textbf{(2)}
+$\det A=- 2 \left(\lambda - 3\right)$.
+For $\lambda\ne 3$: $\det A\neq0$, rank $=$ rank$[A|b]=3$ $\Rightarrow$ \textbf{unique solution}.
+\noindent\emph{Case $\lambda=3$:}
+\begin{align*}
+[A|b] &= \left(\begin{array}{ccc|c}1 & 2 & 1 & 8 \\ 2 & 2 & 2 & 13 \\ 3 & 4 & 3 & \mu\end{array}\right) \\
+&\xrightarrow{\substack{R_2\to R_2-2R_1\\ R_3\to R_3-3R_1}} \left(\begin{array}{ccc|c}1 & 2 & 1 & 8 \\ 0 & -2 & 0 & -3 \\ 0 & -2 & 0 & \mu - 24\end{array}\right) \\
+&\xrightarrow{\substack{R_3\to R_3-R_2}} \left(\begin{array}{ccc|c}1 & 2 & 1 & 8 \\ 0 & -2 & 0 & -3 \\ 0 & 0 & 0 & \mu - 21\end{array}\right)
+\end{align*}
+Here rank$A=2<3$. The last row gives $\mu - 21=0$. So if $\mu=21$: rank$A=$rank$[A|b]=2$ $\Rightarrow$ \textbf{infinitely many solutions}; if $\mu\neq 21$: rank$A<$rank$[A|b]$ $\Rightarrow$ \textbf{no solution}.
+\[ \text{(i) no solution: }\lambda=3,\ \mu\neq 21;\quad \text{(ii) unique: }\lambda\neq 3;\quad \text{(iii) infinitely many: }\lambda=3,\ \mu=21 \]
+\medskip\noindent\textbf{Q.8  Traffic flow (first network)}\par\smallskip
+Assume the directions: $x_1$ from top-left to top-right, $x_2$ down the left side, $x_3$ along the diagonal from top-right to bottom-left, $x_4$ down the right side, $x_5$ along the bottom to the right. Inflow $=$ outflow at each junction:
+\begin{align*}
+\text{top-left: }& x_1+x_2=300 \\
+\text{top-right: }& x_1=x_3+x_4+150 \\
+\text{bottom-left: }& x_2+x_3+200=x_5 \\
+\text{bottom-right: }& x_4+x_5=350
+\end{align*}
+\begin{align*}
+[A|b] &= \left(\begin{array}{ccccc|c}1 & 1 & 0 & 0 & 0 & 300 \\ 1 & 0 & -1 & -1 & 0 & 150 \\ 0 & 1 & 1 & 0 & -1 & -200 \\ 0 & 0 & 0 & 1 & 1 & 350\end{array}\right) \\
+&\xrightarrow{\substack{R_2\to R_2-R_1}} \left(\begin{array}{ccccc|c}1 & 1 & 0 & 0 & 0 & 300 \\ 0 & -1 & -1 & -1 & 0 & -150 \\ 0 & 1 & 1 & 0 & -1 & -200 \\ 0 & 0 & 0 & 1 & 1 & 350\end{array}\right) \\
+&\xrightarrow{\substack{R_3\to R_3+R_2}} \left(\begin{array}{ccccc|c}1 & 1 & 0 & 0 & 0 & 300 \\ 0 & -1 & -1 & -1 & 0 & -150 \\ 0 & 0 & 0 & -1 & -1 & -350 \\ 0 & 0 & 0 & 1 & 1 & 350\end{array}\right) \\
+&\xrightarrow{\substack{R_4\to R_4+R_3}} \left(\begin{array}{ccccc|c}1 & 1 & 0 & 0 & 0 & 300 \\ 0 & -1 & -1 & -1 & 0 & -150 \\ 0 & 0 & 0 & -1 & -1 & -350 \\ 0 & 0 & 0 & 0 & 0 & 0\end{array}\right)
+\end{align*}
+\textbf{(i)} Free variables: $x_2,x_3$. General solution: $x_1=300-x_2,\ x_4=150-x_2-x_3,\ x_5=200+x_2+x_3$ with $x_2,x_3$ free (consistent: total inflow $500=$ total outflow).
+\textbf{(ii)} $x_2=200,\ x_3=50$: $x_1=100,\ x_4=-100,\ x_5=450$. (The negative $x_4$ means traffic would have to flow \emph{opposite} to the assumed direction on that street, so this is not feasible if the street is one-way.)
+\textbf{(iii)} $x_2=150,\ x_3=0$: $x_1=150,\ x_4=0,\ x_5=350$.
+\medskip\noindent\textbf{Q.9  Traffic flow (second network)}\par\smallskip
+Assume: $x_1$ left$\to$top, $x_2$ top$\to$right, $x_3$ left$\to$bottom, $x_4$ right$\to$bottom. Junction equations (in $=$ out):
+\begin{align*}
+\text{left: }& x_1+x_3=100 \\
+\text{top: }& x_1+200=x_2 \\
+\text{right: }& x_2=x_4+100 \\
+\text{bottom: }& x_3+x_4=200
+\end{align*}
+\begin{align*}
+[A|b] &= \left(\begin{array}{cccc|c}1 & 0 & 1 & 0 & 100 \\ 1 & -1 & 0 & 0 & -200 \\ 0 & 1 & 0 & -1 & 100 \\ 0 & 0 & 1 & 1 & 200\end{array}\right) \\
+&\xrightarrow{\substack{R_2\to R_2-R_1}} \left(\begin{array}{cccc|c}1 & 0 & 1 & 0 & 100 \\ 0 & -1 & -1 & 0 & -300 \\ 0 & 1 & 0 & -1 & 100 \\ 0 & 0 & 1 & 1 & 200\end{array}\right) \\
+&\xrightarrow{\substack{R_3\to R_3+R_2}} \left(\begin{array}{cccc|c}1 & 0 & 1 & 0 & 100 \\ 0 & -1 & -1 & 0 & -300 \\ 0 & 0 & -1 & -1 & -200 \\ 0 & 0 & 1 & 1 & 200\end{array}\right) \\
+&\xrightarrow{\substack{R_4\to R_4+R_3}} \left(\begin{array}{cccc|c}1 & 0 & 1 & 0 & 100 \\ 0 & -1 & -1 & 0 & -300 \\ 0 & 0 & -1 & -1 & -200 \\ 0 & 0 & 0 & 0 & 0\end{array}\right)
+\end{align*}
+\textbf{(i)} One free variable ($x_4=t$): $x_1=t-100,\ x_2=t+100,\ x_3=200-t,\ x_4=t$.
+\textbf{(ii)} $x_4=0$: $x_1=-100,\ x_2=100,\ x_3=200$ (the negative $x_1$ means the flow is actually reversed on that street).
+\textbf{(iii)} $x_4=100$: $x_1=0,\ x_2=200,\ x_3=100$.
+\medskip\noindent\textbf{Q.10  Electrical networks (Kirchhoff's laws)}\par\smallskip
+Take $I_1$ (top branch) and $I_3$ (bottom branch) leaving the left node, with both batteries driving current in the direction of $I_1,I_3$, and $I_2$ (middle) returning. Node law: $I_2=I_1+I_3$. Loop law (sum of $RI$ drops $=$ emf) round each loop containing the middle branch.
+\noindent\emph{First network}: \begin{align*}
+I_1-I_2+I_3&=0 \\
+4I_1+1I_2&=16 \\
+4I_3+1I_2&=8
+\end{align*}
+\begin{align*}
+[A|b] &= \left(\begin{array}{ccc|c}1 & -1 & 1 & 0 \\ 4 & 1 & 0 & 16 \\ 0 & 1 & 4 & 8\end{array}\right) \\
+&\xrightarrow{\substack{R_2\to R_2-4R_1}} \left(\begin{array}{ccc|c}1 & -1 & 1 & 0 \\ 0 & 5 & -4 & 16 \\ 0 & 1 & 4 & 8\end{array}\right) \\
+&\xrightarrow{\substack{R_3\to 5R_3-R_2}} \left(\begin{array}{ccc|c}1 & -1 & 1 & 0 \\ 0 & 5 & -4 & 16 \\ 0 & 0 & 24 & 24\end{array}\right)
+\end{align*}
+\[ I_1=3\text{ A},\quad I_2=4\text{ A},\quad I_3=1\text{ A} \]
+\noindent\emph{Second network}: \begin{align*}
+I_1-I_2+I_3&=0 \\
+4I_1+3I_2&=3 \\
+1I_3+3I_2&=4
+\end{align*}
+\begin{align*}
+[A|b] &= \left(\begin{array}{ccc|c}1 & -1 & 1 & 0 \\ 4 & 3 & 0 & 3 \\ 0 & 3 & 1 & 4\end{array}\right) \\
+&\xrightarrow{\substack{R_2\to R_2-4R_1}} \left(\begin{array}{ccc|c}1 & -1 & 1 & 0 \\ 0 & 7 & -4 & 3 \\ 0 & 3 & 1 & 4\end{array}\right) \\
+&\xrightarrow{\substack{R_3\to 7R_3-3R_2}} \left(\begin{array}{ccc|c}1 & -1 & 1 & 0 \\ 0 & 7 & -4 & 3 \\ 0 & 0 & 19 & 19\end{array}\right)
+\end{align*}
+\[ I_1=0\text{ A},\quad I_2=1\text{ A},\quad I_3=1\text{ A} \]

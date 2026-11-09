@@ -1,0 +1,127 @@
+% Tutorial 6 solutions -- fix errors directly in this file.
+\subsection*{Solutions --- Tutorial No. 6}
+\medskip\noindent\textbf{Q.1  Gram--Schmidt}\par\smallskip
+Formula: $v_1=u_1$, $v_k=u_k-\sum_{j<k}\frac{\langle u_k,v_j\rangle}{\langle v_j,v_j\rangle}v_j$, and $e_k=v_k/\|v_k\|$.
+
+\noindent\textbf{(1)} $u_1=(1,\,1,\,1)^T,\ u_2=(-1,\,1,\,0)^T,\ u_3=(1,\,2,\,1)^T$
+\begin{align*}
+v_1&=u_1=\begin{pmatrix}1 \\ 1 \\ 1\end{pmatrix} \\
+v_2&=u_2-\frac{\langle u_2,v_1\rangle}{\langle v_1,v_1\rangle}v_1=\begin{pmatrix}-1 \\ 1 \\ 0\end{pmatrix}=\begin{pmatrix}-1 \\ 1 \\ 0\end{pmatrix} \\
+v_3&=u_3-\frac{\langle u_3,v_1\rangle}{\langle v_1,v_1\rangle}v_1-\frac{\langle u_3,v_2\rangle}{\langle v_2,v_2\rangle}v_2=\begin{pmatrix}1 \\ 2 \\ 1\end{pmatrix}-\frac{4}{3}\begin{pmatrix}1 \\ 1 \\ 1\end{pmatrix} -\frac{1}{2}\begin{pmatrix}-1 \\ 1 \\ 0\end{pmatrix}=\begin{pmatrix}\frac{1}{6} \\ \frac{1}{6} \\ - \frac{1}{3}\end{pmatrix}
+\end{align*}
+\[ \text{Orthogonal basis: }\begin{pmatrix}1 \\ 1 \\ 1\end{pmatrix},\ \begin{pmatrix}-1 \\ 1 \\ 0\end{pmatrix},\ \begin{pmatrix}\frac{1}{6} \\ \frac{1}{6} \\ - \frac{1}{3}\end{pmatrix} \]
+\[ \text{Orthonormal basis: }e_1=\begin{pmatrix}\frac{\sqrt{3}}{3} \\ \frac{\sqrt{3}}{3} \\ \frac{\sqrt{3}}{3}\end{pmatrix},\ e_2=\begin{pmatrix}- \frac{\sqrt{2}}{2} \\ \frac{\sqrt{2}}{2} \\ 0\end{pmatrix},\ e_3=\begin{pmatrix}\frac{\sqrt{6}}{6} \\ \frac{\sqrt{6}}{6} \\ - \frac{\sqrt{6}}{3}\end{pmatrix} \]
+
+\noindent\textbf{(2)} $u_1=(- \frac{3}{5},\,\frac{4}{5},\,0)^T,\ u_2=(\frac{4}{5},\,\frac{3}{5},\,0)^T,\ u_3=(0,\,0,\,1)^T$
+\begin{align*}
+v_1&=u_1=\begin{pmatrix}- \frac{3}{5} \\ \frac{4}{5} \\ 0\end{pmatrix} \\
+v_2&=u_2-\frac{\langle u_2,v_1\rangle}{\langle v_1,v_1\rangle}v_1=\begin{pmatrix}\frac{4}{5} \\ \frac{3}{5} \\ 0\end{pmatrix}=\begin{pmatrix}\frac{4}{5} \\ \frac{3}{5} \\ 0\end{pmatrix} \\
+v_3&=u_3-\frac{\langle u_3,v_1\rangle}{\langle v_1,v_1\rangle}v_1-\frac{\langle u_3,v_2\rangle}{\langle v_2,v_2\rangle}v_2=\begin{pmatrix}0 \\ 0 \\ 1\end{pmatrix}=\begin{pmatrix}0 \\ 0 \\ 1\end{pmatrix}
+\end{align*}
+\[ \text{Orthogonal basis: }\begin{pmatrix}- \frac{3}{5} \\ \frac{4}{5} \\ 0\end{pmatrix},\ \begin{pmatrix}\frac{4}{5} \\ \frac{3}{5} \\ 0\end{pmatrix},\ \begin{pmatrix}0 \\ 0 \\ 1\end{pmatrix} \]
+\[ \text{Orthonormal basis: }e_1=\begin{pmatrix}- \frac{3}{5} \\ \frac{4}{5} \\ 0\end{pmatrix},\ e_2=\begin{pmatrix}\frac{4}{5} \\ \frac{3}{5} \\ 0\end{pmatrix},\ e_3=\begin{pmatrix}0 \\ 0 \\ 1\end{pmatrix} \]
+
+\noindent\textbf{(3)} $u_1=(-1,\,1,\,0)^T,\ u_2=(-2,\,1,\,2)^T,\ u_3=(1,\,-1,\,-2)^T$
+\begin{align*}
+v_1&=u_1=\begin{pmatrix}-1 \\ 1 \\ 0\end{pmatrix} \\
+v_2&=u_2-\frac{\langle u_2,v_1\rangle}{\langle v_1,v_1\rangle}v_1=\begin{pmatrix}-2 \\ 1 \\ 2\end{pmatrix}-\frac{3}{2}\begin{pmatrix}-1 \\ 1 \\ 0\end{pmatrix}=\begin{pmatrix}- \frac{1}{2} \\ - \frac{1}{2} \\ 2\end{pmatrix} \\
+v_3&=u_3-\frac{\langle u_3,v_1\rangle}{\langle v_1,v_1\rangle}v_1-\frac{\langle u_3,v_2\rangle}{\langle v_2,v_2\rangle}v_2=\begin{pmatrix}1 \\ -1 \\ -2\end{pmatrix}+1\begin{pmatrix}-1 \\ 1 \\ 0\end{pmatrix} +\frac{8}{9}\begin{pmatrix}- \frac{1}{2} \\ - \frac{1}{2} \\ 2\end{pmatrix}=\begin{pmatrix}- \frac{4}{9} \\ - \frac{4}{9} \\ - \frac{2}{9}\end{pmatrix}
+\end{align*}
+\[ \text{Orthogonal basis: }\begin{pmatrix}-1 \\ 1 \\ 0\end{pmatrix},\ \begin{pmatrix}- \frac{1}{2} \\ - \frac{1}{2} \\ 2\end{pmatrix},\ \begin{pmatrix}- \frac{4}{9} \\ - \frac{4}{9} \\ - \frac{2}{9}\end{pmatrix} \]
+\[ \text{Orthonormal basis: }e_1=\begin{pmatrix}- \frac{\sqrt{2}}{2} \\ \frac{\sqrt{2}}{2} \\ 0\end{pmatrix},\ e_2=\begin{pmatrix}- \frac{\sqrt{2}}{6} \\ - \frac{\sqrt{2}}{6} \\ \frac{2 \sqrt{2}}{3}\end{pmatrix},\ e_3=\begin{pmatrix}- \frac{2}{3} \\ - \frac{2}{3} \\ - \frac{1}{3}\end{pmatrix} \]
+
+\noindent\textbf{(4)} $u_1=(1,\,2,\,3)^T,\ u_2=(3,\,4,\,5)^T,\ u_3=(6,\,7,\,8)^T$
+\begin{align*}
+v_1&=u_1=\begin{pmatrix}1 \\ 2 \\ 3\end{pmatrix} \\
+v_2&=u_2-\frac{\langle u_2,v_1\rangle}{\langle v_1,v_1\rangle}v_1=\begin{pmatrix}3 \\ 4 \\ 5\end{pmatrix}-\frac{13}{7}\begin{pmatrix}1 \\ 2 \\ 3\end{pmatrix}=\begin{pmatrix}\frac{8}{7} \\ \frac{2}{7} \\ - \frac{4}{7}\end{pmatrix} \\
+v_3&=u_3-\frac{\langle u_3,v_1\rangle}{\langle v_1,v_1\rangle}v_1-\frac{\langle u_3,v_2\rangle}{\langle v_2,v_2\rangle}v_2=\begin{pmatrix}6 \\ 7 \\ 8\end{pmatrix}-\frac{22}{7}\begin{pmatrix}1 \\ 2 \\ 3\end{pmatrix} -\frac{5}{2}\begin{pmatrix}\frac{8}{7} \\ \frac{2}{7} \\ - \frac{4}{7}\end{pmatrix}=\begin{pmatrix}0 \\ 0 \\ 0\end{pmatrix}
+\end{align*}
+Since $v_3=\mathbf0$, the given vectors are linearly dependent; the orthogonal basis of their span has 2 vectors.
+\[ \text{Orthogonal basis: }\begin{pmatrix}1 \\ 2 \\ 3\end{pmatrix},\ \begin{pmatrix}\frac{8}{7} \\ \frac{2}{7} \\ - \frac{4}{7}\end{pmatrix} \]
+\[ \text{Orthonormal basis: }e_1=\begin{pmatrix}\frac{\sqrt{14}}{14} \\ \frac{\sqrt{14}}{7} \\ \frac{3 \sqrt{14}}{14}\end{pmatrix},\ e_2=\begin{pmatrix}\frac{4 \sqrt{21}}{21} \\ \frac{\sqrt{21}}{21} \\ - \frac{2 \sqrt{21}}{21}\end{pmatrix} \]
+
+\noindent\textbf{(5)} $u_1=(1,\,1,\,0)^T,\ u_2=(1,\,0,\,1)^T,\ u_3=(0,\,1,\,1)^T$
+\begin{align*}
+v_1&=u_1=\begin{pmatrix}1 \\ 1 \\ 0\end{pmatrix} \\
+v_2&=u_2-\frac{\langle u_2,v_1\rangle}{\langle v_1,v_1\rangle}v_1=\begin{pmatrix}1 \\ 0 \\ 1\end{pmatrix}-\frac{1}{2}\begin{pmatrix}1 \\ 1 \\ 0\end{pmatrix}=\begin{pmatrix}\frac{1}{2} \\ - \frac{1}{2} \\ 1\end{pmatrix} \\
+v_3&=u_3-\frac{\langle u_3,v_1\rangle}{\langle v_1,v_1\rangle}v_1-\frac{\langle u_3,v_2\rangle}{\langle v_2,v_2\rangle}v_2=\begin{pmatrix}0 \\ 1 \\ 1\end{pmatrix}-\frac{1}{2}\begin{pmatrix}1 \\ 1 \\ 0\end{pmatrix} -\frac{1}{3}\begin{pmatrix}\frac{1}{2} \\ - \frac{1}{2} \\ 1\end{pmatrix}=\begin{pmatrix}- \frac{2}{3} \\ \frac{2}{3} \\ \frac{2}{3}\end{pmatrix}
+\end{align*}
+\[ \text{Orthogonal basis: }\begin{pmatrix}1 \\ 1 \\ 0\end{pmatrix},\ \begin{pmatrix}\frac{1}{2} \\ - \frac{1}{2} \\ 1\end{pmatrix},\ \begin{pmatrix}- \frac{2}{3} \\ \frac{2}{3} \\ \frac{2}{3}\end{pmatrix} \]
+\[ \text{Orthonormal basis: }e_1=\begin{pmatrix}\frac{\sqrt{2}}{2} \\ \frac{\sqrt{2}}{2} \\ 0\end{pmatrix},\ e_2=\begin{pmatrix}\frac{\sqrt{6}}{6} \\ - \frac{\sqrt{6}}{6} \\ \frac{\sqrt{6}}{3}\end{pmatrix},\ e_3=\begin{pmatrix}- \frac{\sqrt{3}}{3} \\ \frac{\sqrt{3}}{3} \\ \frac{\sqrt{3}}{3}\end{pmatrix} \]
+
+\noindent\textbf{(6)} $u_1=(1,\,1,\,1)^T,\ u_2=(1,\,-1,\,1)^T,\ u_3=(-1,\,1,\,1)^T$
+\begin{align*}
+v_1&=u_1=\begin{pmatrix}1 \\ 1 \\ 1\end{pmatrix} \\
+v_2&=u_2-\frac{\langle u_2,v_1\rangle}{\langle v_1,v_1\rangle}v_1=\begin{pmatrix}1 \\ -1 \\ 1\end{pmatrix}-\frac{1}{3}\begin{pmatrix}1 \\ 1 \\ 1\end{pmatrix}=\begin{pmatrix}\frac{2}{3} \\ - \frac{4}{3} \\ \frac{2}{3}\end{pmatrix} \\
+v_3&=u_3-\frac{\langle u_3,v_1\rangle}{\langle v_1,v_1\rangle}v_1-\frac{\langle u_3,v_2\rangle}{\langle v_2,v_2\rangle}v_2=\begin{pmatrix}-1 \\ 1 \\ 1\end{pmatrix}-\frac{1}{3}\begin{pmatrix}1 \\ 1 \\ 1\end{pmatrix} +\frac{1}{2}\begin{pmatrix}\frac{2}{3} \\ - \frac{4}{3} \\ \frac{2}{3}\end{pmatrix}=\begin{pmatrix}-1 \\ 0 \\ 1\end{pmatrix}
+\end{align*}
+\[ \text{Orthogonal basis: }\begin{pmatrix}1 \\ 1 \\ 1\end{pmatrix},\ \begin{pmatrix}\frac{2}{3} \\ - \frac{4}{3} \\ \frac{2}{3}\end{pmatrix},\ \begin{pmatrix}-1 \\ 0 \\ 1\end{pmatrix} \]
+\[ \text{Orthonormal basis: }e_1=\begin{pmatrix}\frac{\sqrt{3}}{3} \\ \frac{\sqrt{3}}{3} \\ \frac{\sqrt{3}}{3}\end{pmatrix},\ e_2=\begin{pmatrix}\frac{\sqrt{6}}{6} \\ - \frac{\sqrt{6}}{3} \\ \frac{\sqrt{6}}{6}\end{pmatrix},\ e_3=\begin{pmatrix}- \frac{\sqrt{2}}{2} \\ 0 \\ \frac{\sqrt{2}}{2}\end{pmatrix} \]
+
+\noindent\textbf{(7)} $u_1=(1,\,2,\,3)^T,\ u_2=(4,\,5,\,5)^T,\ u_3=(6,\,6,\,7)^T$
+\begin{align*}
+v_1&=u_1=\begin{pmatrix}1 \\ 2 \\ 3\end{pmatrix} \\
+v_2&=u_2-\frac{\langle u_2,v_1\rangle}{\langle v_1,v_1\rangle}v_1=\begin{pmatrix}4 \\ 5 \\ 5\end{pmatrix}-\frac{29}{14}\begin{pmatrix}1 \\ 2 \\ 3\end{pmatrix}=\begin{pmatrix}\frac{27}{14} \\ \frac{6}{7} \\ - \frac{17}{14}\end{pmatrix} \\
+v_3&=u_3-\frac{\langle u_3,v_1\rangle}{\langle v_1,v_1\rangle}v_1-\frac{\langle u_3,v_2\rangle}{\langle v_2,v_2\rangle}v_2=\begin{pmatrix}6 \\ 6 \\ 7\end{pmatrix}-\frac{39}{14}\begin{pmatrix}1 \\ 2 \\ 3\end{pmatrix} -\frac{115}{83}\begin{pmatrix}\frac{27}{14} \\ \frac{6}{7} \\ - \frac{17}{14}\end{pmatrix}=\begin{pmatrix}\frac{45}{83} \\ - \frac{63}{83} \\ \frac{27}{83}\end{pmatrix}
+\end{align*}
+\[ \text{Orthogonal basis: }\begin{pmatrix}1 \\ 2 \\ 3\end{pmatrix},\ \begin{pmatrix}\frac{27}{14} \\ \frac{6}{7} \\ - \frac{17}{14}\end{pmatrix},\ \begin{pmatrix}\frac{45}{83} \\ - \frac{63}{83} \\ \frac{27}{83}\end{pmatrix} \]
+\[ \text{Orthonormal basis: }e_1=\begin{pmatrix}\frac{\sqrt{14}}{14} \\ \frac{\sqrt{14}}{7} \\ \frac{3 \sqrt{14}}{14}\end{pmatrix},\ e_2=\begin{pmatrix}\frac{27 \sqrt{1162}}{1162} \\ \frac{6 \sqrt{1162}}{581} \\ - \frac{17 \sqrt{1162}}{1162}\end{pmatrix},\ e_3=\begin{pmatrix}\frac{5 \sqrt{83}}{83} \\ - \frac{7 \sqrt{83}}{83} \\ \frac{3 \sqrt{83}}{83}\end{pmatrix} \]
+
+\noindent\textbf{(8)} $u_1=(1,\,2,\,0)^T,\ u_2=(0,\,5,\,0)^T,\ u_3=(1,\,2,\,3)^T$
+\begin{align*}
+v_1&=u_1=\begin{pmatrix}1 \\ 2 \\ 0\end{pmatrix} \\
+v_2&=u_2-\frac{\langle u_2,v_1\rangle}{\langle v_1,v_1\rangle}v_1=\begin{pmatrix}0 \\ 5 \\ 0\end{pmatrix}-2\begin{pmatrix}1 \\ 2 \\ 0\end{pmatrix}=\begin{pmatrix}-2 \\ 1 \\ 0\end{pmatrix} \\
+v_3&=u_3-\frac{\langle u_3,v_1\rangle}{\langle v_1,v_1\rangle}v_1-\frac{\langle u_3,v_2\rangle}{\langle v_2,v_2\rangle}v_2=\begin{pmatrix}1 \\ 2 \\ 3\end{pmatrix}-1\begin{pmatrix}1 \\ 2 \\ 0\end{pmatrix}=\begin{pmatrix}0 \\ 0 \\ 3\end{pmatrix}
+\end{align*}
+\[ \text{Orthogonal basis: }\begin{pmatrix}1 \\ 2 \\ 0\end{pmatrix},\ \begin{pmatrix}-2 \\ 1 \\ 0\end{pmatrix},\ \begin{pmatrix}0 \\ 0 \\ 3\end{pmatrix} \]
+\[ \text{Orthonormal basis: }e_1=\begin{pmatrix}\frac{\sqrt{5}}{5} \\ \frac{2 \sqrt{5}}{5} \\ 0\end{pmatrix},\ e_2=\begin{pmatrix}- \frac{2 \sqrt{5}}{5} \\ \frac{\sqrt{5}}{5} \\ 0\end{pmatrix},\ e_3=\begin{pmatrix}0 \\ 0 \\ 1\end{pmatrix} \]
+\medskip\noindent\textbf{Q.2  Least squares solutions of $A\mathbf x=\mathbf b$}\par\smallskip
+Solve the normal equations $A^TA\,\hat{\mathbf x}=A^T\mathbf b$.
+
+\noindent\textbf{(1)}
+\begin{align*}
+A^TA&=\begin{pmatrix}5 & -1 \\ -1 & 5\end{pmatrix},\quad A^T\mathbf b=\begin{pmatrix}2 \\ -2\end{pmatrix} \\
+\hat{\mathbf x}&=(A^TA)^{-1}A^T\mathbf b=\begin{pmatrix}\frac{1}{3} \\ - \frac{1}{3}\end{pmatrix}
+\end{align*}
+Least-squares solution: $\hat x_1=\frac{1}{3},\ \hat x_2=- \frac{1}{3}$ (residual $\|\mathbf b-A\hat{\mathbf x}\|=\frac{\sqrt{6}}{3}$).
+
+
+\noindent\textbf{(2)}
+\begin{align*}
+A^TA&=\begin{pmatrix}3 & 6 \\ 6 & 14\end{pmatrix},\quad A^T\mathbf b=\begin{pmatrix}4 \\ 11\end{pmatrix} \\
+\hat{\mathbf x}&=(A^TA)^{-1}A^T\mathbf b=\begin{pmatrix}- \frac{5}{3} \\ \frac{3}{2}\end{pmatrix}
+\end{align*}
+Least-squares solution: $\hat x_1=- \frac{5}{3},\ \hat x_2=\frac{3}{2}$ (residual $\|\mathbf b-A\hat{\mathbf x}\|=\frac{\sqrt{6}}{6}$).
+
+
+\noindent\textbf{(3)}
+\begin{align*}
+A^TA&=\begin{pmatrix}2 & 2 \\ 2 & 5\end{pmatrix},\quad A^T\mathbf b=\begin{pmatrix}2 \\ 5\end{pmatrix} \\
+\hat{\mathbf x}&=(A^TA)^{-1}A^T\mathbf b=\begin{pmatrix}0 \\ 1\end{pmatrix}
+\end{align*}
+Least-squares solution: $\hat x_1=0,\ \hat x_2=1$ (residual $\|\mathbf b-A\hat{\mathbf x}\|=\sqrt{6}$).
+
+
+\noindent\textbf{(4)}
+\begin{align*}
+A^TA&=\begin{pmatrix}11 & 6 \\ 6 & 6\end{pmatrix},\quad A^T\mathbf b=\begin{pmatrix}10 \\ 5\end{pmatrix} \\
+\hat{\mathbf x}&=(A^TA)^{-1}A^T\mathbf b=\begin{pmatrix}1 \\ - \frac{1}{6}\end{pmatrix}
+\end{align*}
+Least-squares solution: $\hat x_1=1,\ \hat x_2=- \frac{1}{6}$ (residual $\|\mathbf b-A\hat{\mathbf x}\|=\frac{\sqrt{30}}{6}$).
+
+
+\noindent\textbf{(5)}
+\begin{align*}
+A^TA&=\begin{pmatrix}14 & -3 \\ -3 & 21\end{pmatrix},\quad A^T\mathbf b=\begin{pmatrix}1 \\ 10\end{pmatrix} \\
+\hat{\mathbf x}&=(A^TA)^{-1}A^T\mathbf b=\begin{pmatrix}\frac{17}{95} \\ \frac{143}{285}\end{pmatrix}
+\end{align*}
+Least-squares solution: $\hat x_1=\frac{17}{95},\ \hat x_2=\frac{143}{285}$ (residual $\|\mathbf b-A\hat{\mathbf x}\|=\frac{77 \sqrt{285}}{285}$).
+
+
+\noindent\textbf{(6)}
+\begin{align*}
+A^TA&=\begin{pmatrix}14 & -7 \\ -7 & 6\end{pmatrix},\quad A^T\mathbf b=\begin{pmatrix}-8 \\ 4\end{pmatrix} \\
+\hat{\mathbf x}&=(A^TA)^{-1}A^T\mathbf b=\begin{pmatrix}- \frac{4}{7} \\ 0\end{pmatrix}
+\end{align*}
+Least-squares solution: $\hat x_1=- \frac{4}{7},\ \hat x_2=0$ (residual $\|\mathbf b-A\hat{\mathbf x}\|=\frac{3 \sqrt{35}}{7}$).
+

@@ -1,0 +1,48 @@
+% Tutorial 3 solutions -- fix errors directly in this file.
+\subsection*{Solutions --- Tutorial No. 3}
+\medskip\noindent\textbf{Q.1  Subspaces of $\mathbb{R}^2$}\par\smallskip
+\begin{description}[leftmargin=1.2cm,itemsep=2pt]
+\item[1.] \textbf{Subspace.} Contains $(0,0)$; $(x_1,0)+(x_2,0)=(x_1+x_2,0)\in W$; $c(x,0)=(cx,0)\in W$. (The $x$-axis.)
+\item[2.] \textbf{Subspace.} $(0,0)$ ($x=0$); $(x_1,-x_1)+(x_2,-x_2)=(x_1+x_2,-(x_1+x_2))\in W$; $c(x,-x)=(cx,-cx)\in W$. (The line $y=-x$.)
+\item[3.] \textbf{Not a subspace.} $(0,0)\notin W$ because the second entry is always $1$. (Also $(x,1)+(z,1)=(x+z,2)\notin W$.)
+\item[4.] \textbf{Not a subspace.} $(0,0)\notin W$: for $x=0$ the vector is $(0,2)$, and $y=3x+2$ is a line not through the origin.
+\item[5.] \textbf{Subspace.} $x^2+y^2=0\iff x=y=0$, so $W=\{(0,0)\}$, the zero subspace.
+\item[6.] \textbf{Subspace.} Both equations reduce to $x=3y$, so $W=\{(3y,y)\}$ is a line through the origin; closed under addition and scalar multiplication.
+\item[7.] \textbf{Not a subspace.} $x^2-y^2=0\iff y=\pm x$ (two lines). $(1,1),(1,-1)\in W$ but $(1,1)+(1,-1)=(2,0)\notin W$: not closed under addition.
+\item[8.] \textbf{Not a subspace.} $(0,0)\notin W$ since $0+0\ne1$ (unit circle). Also not closed under addition or scaling.
+\item[9.] \textbf{Not a subspace.} $(0,0)\notin W$ since $0+0\neq5$ (a line not through the origin).
+\item[10.] \textbf{Not a subspace.} Both equations say $x-3y=2$; $(0,0)$ does not satisfy it, so $W$ is a line not through the origin.
+\end{description}
+\medskip\noindent\textbf{Q.2  Subspaces of $\mathbb{R}^3$}\par\smallskip
+\begin{description}[leftmargin=1.2cm,itemsep=2pt]
+\item[1.] \textbf{Subspace.} $W=\{(x,0,z)\}$ is the $xz$-plane: contains $\mathbf0$, and sums/scalar multiples keep the middle entry $0$.
+\item[2.] \textbf{Subspace.} $W=\{(x,0,0)\}$ is the $x$-axis; contains $\mathbf 0$, closed under $+$ and scalar multiplication.
+\item[3.] \textbf{Subspace.} $W=\{x(1,1,1)\}=\mathrm{span}\{(1,1,1)\}$, a line through the origin.
+\item[4.] \textbf{Subspace.} $W=\{(0,0,z)\}$ is the $z$-axis $=\mathrm{span}\{(0,0,1)\}$.
+\item[5.] \textbf{Not a subspace.} (Printed as a second "4".) $W=\{(x,0,5)\}$: the zero vector $(0,0,0)\notin W$ because the third entry is always $5$.
+\item[6.] \textbf{Not a subspace.} $W=\{(-1,0,-3),(0,0,0),(1,0,3)\}$ has only three vectors. $(1,0,3)+(1,0,3)=(2,0,6)\notin W$: not closed under addition (and $2(1,0,3)\notin W$).
+\item[7.] \textbf{Subspace.} $x+2y+3z=0$ is a plane through the origin (null space of $[1\ 2\ 3]$): $\mathbf0$ satisfies it and it is closed under $+$ and scalar multiplication.
+\item[8.] \textbf{Not a subspace.} $x+2y+3z=3$: $\mathbf 0$ gives $0\ne3$, so $\mathbf0\notin W$ (a plane not through the origin).
+\end{description}
+\medskip\noindent\textbf{Q.3  Subspaces of $P_2(t)$}\par\smallskip
+\begin{description}[leftmargin=1.2cm,itemsep=2pt]
+\item[1.] \textbf{Subspace.} $W=\mathrm{span}\{1,t\}$: contains $0$ and is closed under addition and scalar multiples (polynomials of degree $\le1$).
+\item[2.] \textbf{Subspace.} $W=\mathrm{span}\{t\}$.
+\item[3.] \textbf{Subspace.} $W=\mathrm{span}\{1\}$ (constant polynomials).
+\item[4.] \textbf{Subspace.} $W=\mathrm{span}\{1,t^2\}$.
+\item[5.] \textbf{Not a subspace.} $a+t$: the coefficient of $t$ is always $1$, so the zero polynomial is not in $W$ (also $(a+t)+(b+t)=(a+b)+2t\notin W$).
+\item[6.] \textbf{Not a subspace.} $3+bt$: the constant term is always $3\neq 0$, so $0\notin W$.
+\item[7.] \textbf{Subspace.} $W=\mathrm{span}\{t,t^2\}$.
+\item[8.] \textbf{Not a subspace.} Not closed under scalar multiplication: $1+t\in W$ ($a=1\ge0$) but $(-1)(1+t)=-1-t\notin W$ since $a=-1<0$.
+\end{description}
+\medskip\noindent\textbf{Q.4  Subspaces of $M_{2\times2}(\mathbb{R})$}\par\smallskip
+\begin{description}[leftmargin=1.2cm,itemsep=2pt]
+\item[1.] \textbf{Subspace.} Lower triangular matrices $\begin{pmatrix}a&0\\b&c\end{pmatrix}$ (zero entry fixed): contains $O$, closed under $+$ and scalar multiplication.
+\item[2.] \textbf{Subspace.} Upper triangular matrices: same argument.
+\item[3.] \textbf{Subspace.} Diagonal matrices $\begin{pmatrix}a&0\\0&b\end{pmatrix}$.
+\item[4.] \textbf{Subspace.} Matrices with second column zero, $\begin{pmatrix}a&0\\b&0\end{pmatrix}$.
+\item[5.] \textbf{Subspace.} Symmetric matrices $\begin{pmatrix}a&b\\b&c\end{pmatrix}$: $A^T=A$, $B^T=B\Rightarrow(A+B)^T=A+B$, $(kA)^T=kA$; $O$ is symmetric.
+\item[6.] \textbf{Subspace.} $W=\{a\,\mathrm{diag}(1,-1)\}$ is the span of one matrix.
+\item[7.] \textbf{Subspace.} $W=\{a\begin{pmatrix}1&1\\1&-1\end{pmatrix}\}$, the span of one matrix.
+\item[8.] \textbf{Not a subspace.} Not closed under scalar multiplication: $A=\begin{pmatrix}\frac12&0\\0&0\end{pmatrix}\in W$ but $2A=\begin{pmatrix}1&0\\0&0\end{pmatrix}$ has $a=1$, so $2A\notin W$ (also $a=2,\,a=-1$ add to $1$).
+\end{description}

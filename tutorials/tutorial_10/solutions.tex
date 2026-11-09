@@ -1,0 +1,114 @@
+% Tutorial 10 solutions -- fix errors directly in this file.
+\subsection*{Solutions --- Tutorial No. 10}
+\medskip\noindent\textbf{Q.1  Cayley--Hamilton, $A^{-1}$ and $A^4$}\par\smallskip
+For $n\times n$ $A$ with characteristic polynomial $p(\lambda)=\lambda^n+c_{n-1}\lambda^{n-1}+\dots+c_0$ we have $p(A)=O$. Multiplying by $A^{-1}$ gives $A^{-1}=-\frac{1}{c_0}(A^{n-1}+c_{n-1}A^{n-2}+\dots+c_1I)$, and $A^4$ is found by reducing $X^4$ modulo $p(X)$.
+
+\noindent\textbf{(1)} $A=\begin{pmatrix}1 & 4 \\ 2 & 3\end{pmatrix}$
+\[ p(\lambda)=\det(\lambda I-A)=\lambda^{2} - 4 \lambda - 5 \]
+\begin{align*}
+A^2&=\begin{pmatrix}9 & 16 \\ 8 & 17\end{pmatrix} \\
+p(A)&=A^{2} - 4A - 5I=\begin{pmatrix}0 & 0 \\ 0 & 0\end{pmatrix}=O\ \checkmark
+\end{align*}
+\[ A^{-1}=-\frac{1}{-5}\left(A -4I\right)=\begin{pmatrix}- \frac{3}{5} & \frac{4}{5} \\ \frac{2}{5} & - \frac{1}{5}\end{pmatrix} \]
+\[ X^4\equiv 104 X + 105\pmod{p(X)}\ \Rightarrow\ A^4=104A + 105I=\begin{pmatrix}209 & 416 \\ 208 & 417\end{pmatrix} \]
+
+\noindent\textbf{(2)} $A=\begin{pmatrix}1 & -2 \\ -5 & 4\end{pmatrix}$
+\[ p(\lambda)=\det(\lambda I-A)=\lambda^{2} - 5 \lambda - 6 \]
+\begin{align*}
+A^2&=\begin{pmatrix}11 & -10 \\ -25 & 26\end{pmatrix} \\
+p(A)&=A^{2} - 5A - 6I=\begin{pmatrix}0 & 0 \\ 0 & 0\end{pmatrix}=O\ \checkmark
+\end{align*}
+\[ A^{-1}=-\frac{1}{-6}\left(A -5I\right)=\begin{pmatrix}- \frac{2}{3} & - \frac{1}{3} \\ - \frac{5}{6} & - \frac{1}{6}\end{pmatrix} \]
+\[ X^4\equiv 185 X + 186\pmod{p(X)}\ \Rightarrow\ A^4=185A + 186I=\begin{pmatrix}371 & -370 \\ -925 & 926\end{pmatrix} \]
+
+\noindent\textbf{(3)} $A=\begin{pmatrix}2 & 2 \\ 1 & 1\end{pmatrix}$
+\[ p(\lambda)=\det(\lambda I-A)=\lambda^{2} - 3 \lambda \]
+\begin{align*}
+A^2&=\begin{pmatrix}6 & 6 \\ 3 & 3\end{pmatrix} \\
+p(A)&=A^{2} - 3A=\begin{pmatrix}0 & 0 \\ 0 & 0\end{pmatrix}=O\ \checkmark
+\end{align*}
+$\det A=0$, so $A^{-1}$ does not exist.
+\[ X^4\equiv 27 X\pmod{p(X)}\ \Rightarrow\ A^4=27A=\begin{pmatrix}54 & 54 \\ 27 & 27\end{pmatrix} \]
+
+\noindent\textbf{(4)} $A=\begin{pmatrix}-7 & 4 \\ -3 & 0\end{pmatrix}$
+\[ p(\lambda)=\det(\lambda I-A)=\lambda^{2} + 7 \lambda + 12 \]
+\begin{align*}
+A^2&=\begin{pmatrix}37 & -28 \\ 21 & -12\end{pmatrix} \\
+p(A)&=A^{2} + 7A + 12I=\begin{pmatrix}0 & 0 \\ 0 & 0\end{pmatrix}=O\ \checkmark
+\end{align*}
+\[ A^{-1}=-\frac{1}{12}\left(A +7I\right)=\begin{pmatrix}0 & - \frac{1}{3} \\ \frac{1}{4} & - \frac{7}{12}\end{pmatrix} \]
+\[ X^4\equiv - 175 X - 444\pmod{p(X)}\ \Rightarrow\ A^4=-175A - 444I=\begin{pmatrix}781 & -700 \\ 525 & -444\end{pmatrix} \]
+
+\noindent\textbf{(5)} $A=\begin{pmatrix}5 & 0 & 1 \\ 0 & -2 & 0 \\ 1 & 0 & 5\end{pmatrix}$
+\[ p(\lambda)=\det(\lambda I-A)=\lambda^{3} - 8 \lambda^{2} + 4 \lambda + 48 \]
+\begin{align*}
+A^2&=\begin{pmatrix}26 & 0 & 10 \\ 0 & 4 & 0 \\ 10 & 0 & 26\end{pmatrix},\quad A^3=\begin{pmatrix}140 & 0 & 76 \\ 0 & -8 & 0 \\ 76 & 0 & 140\end{pmatrix} \\
+p(A)&=A^{3} - 8A^{2} + 4A + 48I=\begin{pmatrix}0 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 0\end{pmatrix}=O\ \checkmark
+\end{align*}
+\[ A^{-1}=-\frac{1}{48}\left(A^{2} -8A +4I\right)=\begin{pmatrix}\frac{5}{24} & 0 & - \frac{1}{24} \\ 0 & - \frac{1}{2} & 0 \\ - \frac{1}{24} & 0 & \frac{5}{24}\end{pmatrix} \]
+\[ X^4\equiv 60 X^{2} - 80 X - 384\pmod{p(X)}\ \Rightarrow\ A^4=60A^{2} - 80A - 384I=\begin{pmatrix}776 & 0 & 520 \\ 0 & 16 & 0 \\ 520 & 0 & 776\end{pmatrix} \]
+
+\noindent\textbf{(6)} $A=\begin{pmatrix}-2 & 5 & 4 \\ 5 & 7 & 5 \\ 4 & 5 & -2\end{pmatrix}$
+\[ p(\lambda)=\det(\lambda I-A)=\lambda^{3} - 3 \lambda^{2} - 90 \lambda - 216 \]
+\begin{align*}
+A^2&=\begin{pmatrix}45 & 45 & 9 \\ 45 & 99 & 45 \\ 9 & 45 & 45\end{pmatrix},\quad A^3=\begin{pmatrix}171 & 585 & 387 \\ 585 & 1143 & 585 \\ 387 & 585 & 171\end{pmatrix} \\
+p(A)&=A^{3} - 3A^{2} - 90A - 216I=\begin{pmatrix}0 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 0\end{pmatrix}=O\ \checkmark
+\end{align*}
+\[ A^{-1}=-\frac{1}{-216}\left(A^{2} -3A -90I\right)=\begin{pmatrix}- \frac{13}{72} & \frac{5}{36} & - \frac{1}{72} \\ \frac{5}{36} & - \frac{1}{18} & \frac{5}{36} \\ - \frac{1}{72} & \frac{5}{36} & - \frac{13}{72}\end{pmatrix} \]
+\[ X^4\equiv 99 X^{2} + 486 X + 648\pmod{p(X)}\ \Rightarrow\ A^4=99A^{2} + 486A + 648I=\begin{pmatrix}4131 & 6885 & 2835 \\ 6885 & 13851 & 6885 \\ 2835 & 6885 & 4131\end{pmatrix} \]
+\medskip\noindent\textbf{Q.3}\par\smallskip
+$A=\begin{pmatrix}2 & 1 & 1 \\ 0 & 1 & 0 \\ 1 & 1 & 2\end{pmatrix}$.
+\[ p(\lambda)=\det(\lambda I-A)=\lambda^{3} - 5 \lambda^{2} + 7 \lambda - 3 \]
+\begin{align*}
+A^2&=\begin{pmatrix}5 & 4 & 4 \\ 0 & 1 & 0 \\ 4 & 4 & 5\end{pmatrix},\quad A^3=\begin{pmatrix}14 & 13 & 13 \\ 0 & 1 & 0 \\ 13 & 13 & 14\end{pmatrix} \\
+p(A)&=A^{3} - 5A^{2} + 7A - 3I=\begin{pmatrix}0 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 0\end{pmatrix}=O\ \checkmark
+\end{align*}
+\[ A^{-1}=-\frac{1}{-3}\left(A^{2} -5A +7I\right)=\begin{pmatrix}\frac{2}{3} & - \frac{1}{3} & - \frac{1}{3} \\ 0 & 1 & 0 \\ - \frac{1}{3} & - \frac{1}{3} & \frac{2}{3}\end{pmatrix} \]
+\[ X^4\equiv 18 X^{2} - 32 X + 15\pmod{p(X)}\ \Rightarrow\ A^4=18A^{2} - 32A + 15I=\begin{pmatrix}41 & 40 & 40 \\ 0 & 1 & 0 \\ 40 & 40 & 41\end{pmatrix} \]
+$p(X)=X^{3} - 5 X^{2} + 7 X - 3$. Dividing $f(X)=X^{8} - 5 X^{7} + 7 X^{6} - 3 X^{5} + X^{4} - 5 X^{3} + 8 X^{2} - 2 X + 1$ by $p(X)$: quotient $q(X)=X^{5} + X$, remainder $r(X)=X^{2} + X + 1$. Since $p(A)=O$, $f(A)=q(A)p(A)+r(A)=r(A)$.
+\[ f(A)=r(A)=\begin{pmatrix}8 & 5 & 5 \\ 0 & 3 & 0 \\ 5 & 5 & 8\end{pmatrix} \]
+\medskip\noindent\textbf{Q.4}\par\smallskip
+$A=\begin{pmatrix}2 & 1 \\ 1 & 2\end{pmatrix}$.
+\[ p(\lambda)=\det(\lambda I-A)=\lambda^{2} - 4 \lambda + 3 \]
+\begin{align*}
+A^2&=\begin{pmatrix}5 & 4 \\ 4 & 5\end{pmatrix} \\
+p(A)&=A^{2} - 4A + 3I=\begin{pmatrix}0 & 0 \\ 0 & 0\end{pmatrix}=O\ \checkmark
+\end{align*}
+\[ A^{-1}=-\frac{1}{3}\left(A -4I\right)=\begin{pmatrix}\frac{2}{3} & - \frac{1}{3} \\ - \frac{1}{3} & \frac{2}{3}\end{pmatrix} \]
+\[ X^4\equiv 40 X - 39\pmod{p(X)}\ \Rightarrow\ A^4=40A - 39I=\begin{pmatrix}41 & 40 \\ 40 & 41\end{pmatrix} \]
+$p(X)=X^{2} - 4 X + 3$. Dividing $f(X)=X^{5} - 3 X^{4} + 2 X^{3} - 4 X^{2} + 5 X - 2$ by $p(X)$: quotient $q(X)=X^{3} + X^{2} + 3 X + 5$, remainder $r(X)=16 X - 17$. Since $p(A)=O$, $f(A)=q(A)p(A)+r(A)=r(A)$.
+\[ f(A)=r(A)=\begin{pmatrix}15 & 16 \\ 16 & 15\end{pmatrix} \]
+\medskip\noindent\textbf{Q.5  Diagonalization}\par\smallskip
+$A$ is diagonalizable iff it has $n$ linearly independent eigenvectors. Then $P=[\mathbf v_1\cdots\mathbf v_n]$ (modal matrix) and the spectral matrix is $D=P^{-1}AP=\mathrm{diag}(\lambda_1,\dots,\lambda_n)$.
+
+\noindent\textbf{(1)} $A=\begin{pmatrix}5 & -3 \\ 2 & 0\end{pmatrix}$, $\det(A-\lambda I)=\left(\lambda - 3\right) \left(\lambda - 2\right)$.
+\begin{itemize}\item Eigenvectors: $\lambda=2$ (AM $=1$, GM $=1$): $\begin{pmatrix}1 \\ 1\end{pmatrix}$; $\lambda=3$ (AM $=1$, GM $=1$): $\begin{pmatrix}\frac{3}{2} \\ 1\end{pmatrix}$.
+\item GM $=$ AM for every eigenvalue, so $A$ is \textbf{diagonalizable}. Modal matrix $P=\begin{pmatrix}1 & \frac{3}{2} \\ 1 & 1\end{pmatrix}$, spectral matrix $D=P^{-1}AP=\begin{pmatrix}2 & 0 \\ 0 & 3\end{pmatrix}$.\end{itemize}
+
+\noindent\textbf{(2)} $A=\begin{pmatrix}2 & 1 \\ 1 & 2\end{pmatrix}$, $\det(A-\lambda I)=\left(\lambda - 3\right) \left(\lambda - 1\right)$.
+\begin{itemize}\item Eigenvectors: $\lambda=1$ (AM $=1$, GM $=1$): $\begin{pmatrix}-1 \\ 1\end{pmatrix}$; $\lambda=3$ (AM $=1$, GM $=1$): $\begin{pmatrix}1 \\ 1\end{pmatrix}$.
+\item GM $=$ AM for every eigenvalue, so $A$ is \textbf{diagonalizable}. Modal matrix $P=\begin{pmatrix}-1 & 1 \\ 1 & 1\end{pmatrix}$, spectral matrix $D=P^{-1}AP=\begin{pmatrix}1 & 0 \\ 0 & 3\end{pmatrix}$.\end{itemize}
+
+\noindent\textbf{(3)} $A=\begin{pmatrix}4 & 2 \\ 1 & 3\end{pmatrix}$, $\det(A-\lambda I)=\left(\lambda - 5\right) \left(\lambda - 2\right)$.
+\begin{itemize}\item Eigenvectors: $\lambda=2$ (AM $=1$, GM $=1$): $\begin{pmatrix}-1 \\ 1\end{pmatrix}$; $\lambda=5$ (AM $=1$, GM $=1$): $\begin{pmatrix}2 \\ 1\end{pmatrix}$.
+\item GM $=$ AM for every eigenvalue, so $A$ is \textbf{diagonalizable}. Modal matrix $P=\begin{pmatrix}-1 & 2 \\ 1 & 1\end{pmatrix}$, spectral matrix $D=P^{-1}AP=\begin{pmatrix}2 & 0 \\ 0 & 5\end{pmatrix}$.\end{itemize}
+
+\noindent\textbf{(4)} $A=\begin{pmatrix}0 & 1 \\ -2 & 3\end{pmatrix}$, $\det(A-\lambda I)=\left(\lambda - 2\right) \left(\lambda - 1\right)$.
+\begin{itemize}\item Eigenvectors: $\lambda=1$ (AM $=1$, GM $=1$): $\begin{pmatrix}1 \\ 1\end{pmatrix}$; $\lambda=2$ (AM $=1$, GM $=1$): $\begin{pmatrix}\frac{1}{2} \\ 1\end{pmatrix}$.
+\item GM $=$ AM for every eigenvalue, so $A$ is \textbf{diagonalizable}. Modal matrix $P=\begin{pmatrix}1 & \frac{1}{2} \\ 1 & 1\end{pmatrix}$, spectral matrix $D=P^{-1}AP=\begin{pmatrix}1 & 0 \\ 0 & 2\end{pmatrix}$.\end{itemize}
+
+\noindent\textbf{(5)} $A=\begin{pmatrix}1 & 0 & 0 \\ 0 & -2 & 1 \\ 0 & -2 & 1\end{pmatrix}$, $\det(A-\lambda I)=\lambda \left(\lambda - 1\right) \left(\lambda + 1\right)$.
+\begin{itemize}\item Eigenvectors: $\lambda=-1$ (AM $=1$, GM $=1$): $\begin{pmatrix}0 \\ 1 \\ 1\end{pmatrix}$; $\lambda=0$ (AM $=1$, GM $=1$): $\begin{pmatrix}0 \\ \frac{1}{2} \\ 1\end{pmatrix}$; $\lambda=1$ (AM $=1$, GM $=1$): $\begin{pmatrix}1 \\ 0 \\ 0\end{pmatrix}$.
+\item GM $=$ AM for every eigenvalue, so $A$ is \textbf{diagonalizable}. Modal matrix $P=\begin{pmatrix}0 & 0 & 1 \\ 1 & \frac{1}{2} & 0 \\ 1 & 1 & 0\end{pmatrix}$, spectral matrix $D=P^{-1}AP=\begin{pmatrix}-1 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 1\end{pmatrix}$.\end{itemize}
+
+\noindent\textbf{(6)} $A=\begin{pmatrix}0 & -1 & 2 \\ 0 & 2 & 2 \\ 0 & 0 & 1\end{pmatrix}$, $\det(A-\lambda I)=\lambda \left(\lambda - 2\right) \left(\lambda - 1\right)$.
+\begin{itemize}\item Eigenvectors: $\lambda=0$ (AM $=1$, GM $=1$): $\begin{pmatrix}1 \\ 0 \\ 0\end{pmatrix}$; $\lambda=1$ (AM $=1$, GM $=1$): $\begin{pmatrix}4 \\ -2 \\ 1\end{pmatrix}$; $\lambda=2$ (AM $=1$, GM $=1$): $\begin{pmatrix}- \frac{1}{2} \\ 1 \\ 0\end{pmatrix}$.
+\item GM $=$ AM for every eigenvalue, so $A$ is \textbf{diagonalizable}. Modal matrix $P=\begin{pmatrix}1 & 4 & - \frac{1}{2} \\ 0 & -2 & 1 \\ 0 & 1 & 0\end{pmatrix}$, spectral matrix $D=P^{-1}AP=\begin{pmatrix}0 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 2\end{pmatrix}$.\end{itemize}
+
+\noindent\textbf{(7)} $A=\begin{pmatrix}0 & 1 & 1 \\ 1 & 0 & 1 \\ 1 & 1 & 0\end{pmatrix}$, $\det(A-\lambda I)=\left(\lambda - 2\right) \left(\lambda + 1\right)^{2}$.
+\begin{itemize}\item Eigenvectors: $\lambda=-1$ (AM $=2$, GM $=2$): $\begin{pmatrix}-1 \\ 1 \\ 0\end{pmatrix}$, $\begin{pmatrix}-1 \\ 0 \\ 1\end{pmatrix}$; $\lambda=2$ (AM $=1$, GM $=1$): $\begin{pmatrix}1 \\ 1 \\ 1\end{pmatrix}$.
+\item GM $=$ AM for every eigenvalue, so $A$ is \textbf{diagonalizable}. Modal matrix $P=\begin{pmatrix}-1 & -1 & 1 \\ 1 & 0 & 1 \\ 0 & 1 & 1\end{pmatrix}$, spectral matrix $D=P^{-1}AP=\begin{pmatrix}-1 & 0 & 0 \\ 0 & -1 & 0 \\ 0 & 0 & 2\end{pmatrix}$.\end{itemize}
+
+\noindent\textbf{(8)} $A=\begin{pmatrix}-1 & 0 & 2 \\ -1 & 1 & 2 \\ 0 & 0 & 1\end{pmatrix}$, $\det(A-\lambda I)=\left(\lambda - 1\right)^{2} \left(\lambda + 1\right)$.
+\begin{itemize}\item Eigenvectors: $\lambda=-1$ (AM $=1$, GM $=1$): $\begin{pmatrix}2 \\ 1 \\ 0\end{pmatrix}$; $\lambda=1$ (AM $=2$, GM $=1$): $\begin{pmatrix}0 \\ 1 \\ 0\end{pmatrix}$.
+\item Only 2 independent eigenvector(s) for a $3\times3$ matrix (GM $<$ AM), so $A$ is \textbf{not diagonalizable}.\end{itemize}

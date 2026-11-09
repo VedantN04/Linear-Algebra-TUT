@@ -1,0 +1,54 @@
+% Tutorial 12 solutions -- fix errors directly in this file.
+\subsection*{Solutions --- Tutorial No. 12}
+\medskip\noindent\textbf{Q.1  Singular value decomposition $A=U\Sigma V^T$}\par\smallskip
+Method: eigen-decompose $A^TA$ (or $AA^T$ if that is smaller): its eigenvalues are $\sigma_i^2$; orthonormal eigenvectors give $V$ (columns $\mathbf v_i$); $\mathbf u_i=A\mathbf v_i/\sigma_i$ for $\sigma_i>0$, completed to an orthonormal basis of $\mathbb{R}^m$ for the remaining columns of $U$. $\Sigma$ has $\sigma_1\ge\sigma_2\ge\dots$ on its diagonal.
+
+\noindent\textbf{(1)} $A=\begin{pmatrix}1 & 1 \\ 0 & 1 \\ 1 & 0\end{pmatrix}$
+\begin{itemize}\item $A^TA=\begin{pmatrix}2 & 1 \\ 1 & 2\end{pmatrix}$ has eigenvalues $3$, $1$; singular values $\sigma_i=\sqrt{\lambda_i}$: $\sqrt{3}$, $1$.
+\item $V=\begin{pmatrix}\frac{\sqrt{2}}{2} & - \frac{\sqrt{2}}{2} \\ \frac{\sqrt{2}}{2} & \frac{\sqrt{2}}{2}\end{pmatrix}$, $\ U=\begin{pmatrix}\frac{\sqrt{6}}{3} & 0 & - \frac{\sqrt{3}}{3} \\ \frac{\sqrt{6}}{6} & \frac{\sqrt{2}}{2} & \frac{\sqrt{3}}{3} \\ \frac{\sqrt{6}}{6} & - \frac{\sqrt{2}}{2} & \frac{\sqrt{3}}{3}\end{pmatrix}$, $\ \Sigma=\begin{pmatrix}\sqrt{3} & 0 \\ 0 & 1 \\ 0 & 0\end{pmatrix}$.
+\item $A=U\Sigma V^T$ (checked by multiplying out).\end{itemize}
+
+\noindent\textbf{(2)} $A=\begin{pmatrix}0 & 3 \\ 4 & 0\end{pmatrix}$
+\begin{itemize}\item $A^TA=\begin{pmatrix}16 & 0 \\ 0 & 9\end{pmatrix}$ has eigenvalues $16$, $9$; singular values $\sigma_i=\sqrt{\lambda_i}$: $4$, $3$.
+\item $V=\begin{pmatrix}1 & 0 \\ 0 & 1\end{pmatrix}$, $\ U=\begin{pmatrix}0 & 1 \\ 1 & 0\end{pmatrix}$, $\ \Sigma=\begin{pmatrix}4 & 0 \\ 0 & 3\end{pmatrix}$.
+\item $A=U\Sigma V^T$ (checked by multiplying out).\end{itemize}
+
+\noindent\textbf{(3)} $A=\begin{pmatrix}1 & 0 & -1 \\ 1 & 1 & 1\end{pmatrix}$
+\begin{itemize}\item $AA^T=\begin{pmatrix}2 & 0 \\ 0 & 3\end{pmatrix}$ has eigenvalues $3$, $2$; singular values $\sigma_i=\sqrt{\lambda_i}$: $\sqrt{3}$, $\sqrt{2}$.
+\item $V=\begin{pmatrix}\frac{\sqrt{3}}{3} & \frac{\sqrt{2}}{2} & \frac{\sqrt{6}}{6} \\ \frac{\sqrt{3}}{3} & 0 & - \frac{\sqrt{6}}{3} \\ \frac{\sqrt{3}}{3} & - \frac{\sqrt{2}}{2} & \frac{\sqrt{6}}{6}\end{pmatrix}$, $\ U=\begin{pmatrix}0 & 1 \\ 1 & 0\end{pmatrix}$, $\ \Sigma=\begin{pmatrix}\sqrt{3} & 0 & 0 \\ 0 & \sqrt{2} & 0\end{pmatrix}$.
+\item $A=U\Sigma V^T$ (checked by multiplying out).\end{itemize}
+
+\noindent\textbf{(4)} $A=\begin{pmatrix}1 & 0 & 0 \\ 0 & 2 & 0\end{pmatrix}$
+\begin{itemize}\item $AA^T=\begin{pmatrix}1 & 0 \\ 0 & 4\end{pmatrix}$ has eigenvalues $4$, $1$; singular values $\sigma_i=\sqrt{\lambda_i}$: $2$, $1$.
+\item $V=\begin{pmatrix}0 & 1 & 0 \\ 1 & 0 & 0 \\ 0 & 0 & 1\end{pmatrix}$, $\ U=\begin{pmatrix}0 & 1 \\ 1 & 0\end{pmatrix}$, $\ \Sigma=\begin{pmatrix}2 & 0 & 0 \\ 0 & 1 & 0\end{pmatrix}$.
+\item $A=U\Sigma V^T$ (checked by multiplying out).\end{itemize}
+
+\noindent\textbf{(5)} $A=\begin{pmatrix}3 & 2 & 2 \\ 2 & 3 & -2\end{pmatrix}$
+\begin{itemize}\item $AA^T=\begin{pmatrix}17 & 8 \\ 8 & 17\end{pmatrix}$ has eigenvalues $25$, $9$; singular values $\sigma_i=\sqrt{\lambda_i}$: $5$, $3$.
+\item $V=\begin{pmatrix}\frac{\sqrt{2}}{2} & - \frac{\sqrt{2}}{6} & - \frac{2}{3} \\ \frac{\sqrt{2}}{2} & \frac{\sqrt{2}}{6} & \frac{2}{3} \\ 0 & - \frac{2 \sqrt{2}}{3} & \frac{1}{3}\end{pmatrix}$, $\ U=\begin{pmatrix}\frac{\sqrt{2}}{2} & - \frac{\sqrt{2}}{2} \\ \frac{\sqrt{2}}{2} & \frac{\sqrt{2}}{2}\end{pmatrix}$, $\ \Sigma=\begin{pmatrix}5 & 0 & 0 \\ 0 & 3 & 0\end{pmatrix}$.
+\item $A=U\Sigma V^T$ (checked by multiplying out).\end{itemize}
+
+\noindent\textbf{(6)} $A=\begin{pmatrix}1 & -1 \\ -2 & 2 \\ 2 & -2\end{pmatrix}$
+\begin{itemize}\item $A^TA=\begin{pmatrix}9 & -9 \\ -9 & 9\end{pmatrix}$ has eigenvalues $18$, $0$; singular values $\sigma_i=\sqrt{\lambda_i}$: $3 \sqrt{2}$, $0$.
+\item $V=\begin{pmatrix}- \frac{\sqrt{2}}{2} & \frac{\sqrt{2}}{2} \\ \frac{\sqrt{2}}{2} & \frac{\sqrt{2}}{2}\end{pmatrix}$, $\ U=\begin{pmatrix}- \frac{1}{3} & \frac{2 \sqrt{5}}{5} & - \frac{2 \sqrt{5}}{15} \\ \frac{2}{3} & \frac{\sqrt{5}}{5} & \frac{4 \sqrt{5}}{15} \\ - \frac{2}{3} & 0 & \frac{\sqrt{5}}{3}\end{pmatrix}$, $\ \Sigma=\begin{pmatrix}3 \sqrt{2} & 0 \\ 0 & 0 \\ 0 & 0\end{pmatrix}$.
+\item $A=U\Sigma V^T$ (checked by multiplying out).\end{itemize}
+
+\noindent\textbf{(7)} $A=\begin{pmatrix}2 & 0 \\ 0 & 2 \\ 0 & 0\end{pmatrix}$
+\begin{itemize}\item $A^TA=\begin{pmatrix}4 & 0 \\ 0 & 4\end{pmatrix}$ has eigenvalues $4$, $4$; singular values $\sigma_i=\sqrt{\lambda_i}$: $2$, $2$.
+\item $V=\begin{pmatrix}1 & 0 \\ 0 & 1\end{pmatrix}$, $\ U=\begin{pmatrix}1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1\end{pmatrix}$, $\ \Sigma=\begin{pmatrix}2 & 0 \\ 0 & 2 \\ 0 & 0\end{pmatrix}$.
+\item $A=U\Sigma V^T$ (checked by multiplying out).\end{itemize}
+
+\noindent\textbf{(8)} $A=\begin{pmatrix}4 & 11 & 14 \\ 8 & 7 & -2\end{pmatrix}$
+\begin{itemize}\item $AA^T=\begin{pmatrix}333 & 81 \\ 81 & 117\end{pmatrix}$ has eigenvalues $360$, $90$; singular values $\sigma_i=\sqrt{\lambda_i}$: $6 \sqrt{10}$, $3 \sqrt{10}$.
+\item $V=\begin{pmatrix}\frac{1}{3} & \frac{2}{3} & \frac{2}{3} \\ \frac{2}{3} & \frac{1}{3} & - \frac{2}{3} \\ \frac{2}{3} & - \frac{2}{3} & \frac{1}{3}\end{pmatrix}$, $\ U=\begin{pmatrix}\frac{3 \sqrt{10}}{10} & - \frac{\sqrt{10}}{10} \\ \frac{\sqrt{10}}{10} & \frac{3 \sqrt{10}}{10}\end{pmatrix}$, $\ \Sigma=\begin{pmatrix}6 \sqrt{10} & 0 & 0 \\ 0 & 3 \sqrt{10} & 0\end{pmatrix}$.
+\item $A=U\Sigma V^T$ (checked by multiplying out).\end{itemize}
+
+\noindent\textbf{(9)} $A=\begin{pmatrix}4 & 0 \\ 0 & 2 \\ 0 & 0\end{pmatrix}$
+\begin{itemize}\item $A^TA=\begin{pmatrix}16 & 0 \\ 0 & 4\end{pmatrix}$ has eigenvalues $16$, $4$; singular values $\sigma_i=\sqrt{\lambda_i}$: $4$, $2$.
+\item $V=\begin{pmatrix}1 & 0 \\ 0 & 1\end{pmatrix}$, $\ U=\begin{pmatrix}1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1\end{pmatrix}$, $\ \Sigma=\begin{pmatrix}4 & 0 \\ 0 & 2 \\ 0 & 0\end{pmatrix}$.
+\item $A=U\Sigma V^T$ (checked by multiplying out).\end{itemize}
+
+\noindent\textbf{(10)} $A=\begin{pmatrix}-6 & 4 & 8 \\ 6 & 0 & 1\end{pmatrix}$
+\begin{itemize}\item $AA^T=\begin{pmatrix}116 & -28 \\ -28 & 37\end{pmatrix}$ has eigenvalues $\lambda=124.917, 28.0825$ (roots of $\lambda^2-153\lambda+3508=0$ -- not perfect squares), so the singular values are irrational: $\sigma_1\approx11.1766,\ \sigma_2\approx5.2993$.
+\item Numerically (4 d.p.), $A=U\Sigma V^T$ with\end{itemize}
+\[ U\approx\begin{pmatrix}-0.9528 & 0.3035 \\ 0.3035 & 0.9528\end{pmatrix},\quad \Sigma\approx\begin{pmatrix}11.1766 & 0.0 & 0.0 \\ 0.0 & 5.2993 & 0.0\end{pmatrix},\quad V\approx\begin{pmatrix}0.6744 & 0.7352 & -0.0675 \\ -0.341 & 0.2291 & -0.9117 \\ -0.6549 & 0.6379 & 0.4052\end{pmatrix} \]

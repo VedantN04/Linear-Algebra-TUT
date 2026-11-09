@@ -1,0 +1,90 @@
+% Tutorial 5 solutions -- fix errors directly in this file.
+\subsection*{Solutions --- Tutorial No. 5}
+\medskip\noindent\textbf{Q.1  Which are inner products?}\par\smallskip
+(An inner product must be symmetric, linear in the first slot, and positive definite: $\langle u,u\rangle>0$ for $u\ne0$.)
+\begin{description}[leftmargin=1.2cm,itemsep=2pt]
+\item[1.] \textbf{Yes, inner product.} Symmetric, bilinear, and $2x_1^2+3x_2^2>0$ for $(x_1,x_2)\ne0$ (weights $2,3>0$).
+\item[2.] \textbf{Not an inner product.} Not symmetric: $\langle u,v\rangle$ contains $-x_1y_2$, but $\langle v,u\rangle$ contains $-y_1x_2$; e.g. $\langle(1,0),(0,1)\rangle=-1$ while $\langle(0,1),(1,0)\rangle=0$.
+\item[3.] \textbf{Yes, inner product.} Weighted dot product with positive weights $5,1$: symmetric, bilinear, positive definite.
+\item[4.] \textbf{Not an inner product.} Not linear: $\langle 2u,v\rangle=4\langle u,v\rangle\neq2\langle u,v\rangle$ (squares of the entries).
+\item[5.] \textbf{Not an inner product.} Not linear: $\langle \mathbf0,v\rangle=5\neq0$ (the added constant breaks bilinearity).
+\item[6.] \textbf{Yes, inner product.} Weighted dot product with positive weights $1,4,1$.
+\item[7.] \textbf{Not an inner product.} Not symmetric ($x_1y_2\neq y_1x_2$ in general) and not positive: for $u=(1,0,0)$ we get $\langle u,u\rangle=x_1x_2+5x_2x_3=0$ though $u\neq0$.
+\item[8.] \textbf{Not an inner product.} Not positive definite: for $u=(0,1,0)\ne\mathbf0$, $\langle u,u\rangle=0+0=0$.
+\end{description}
+\medskip\noindent\textbf{Q.2  Standard inner products}\par\smallskip
+
+\noindent\textbf{1.} $V=\mathbb{R}^3$, $\langle u,v\rangle=u\cdot v$
+\begin{align*}
+\|u\|&=\sqrt{\langle u,u\rangle}=\sqrt{1}=1 \\
+\|v\|&=\sqrt{\langle v,v\rangle}=\sqrt{1}=1 \\
+\langle u,v\rangle&=0 \\
+d(u,v)&=\|u-v\|=\sqrt{2} \\
+\cos\theta&=\frac{\langle u,v\rangle}{\|u\|\|v\|}=0\ \Rightarrow\ \theta=\frac{\pi}{2}\approx 90.00^\circ
+\end{align*}
+$\langle u,v\rangle=0$, so $u,v$ are \textbf{orthogonal} and, both being unit vectors, \textbf{orthonormal}.
+\[ \mathrm{proj}_v u=\frac{\langle u,v\rangle}{\langle v,v\rangle}v=0\,v=\begin{pmatrix}0 \\ 0 \\ 0\end{pmatrix},\qquad \mathrm{proj}_u v=\frac{\langle v,u\rangle}{\langle u,u\rangle}u=0\,u=\begin{pmatrix}0 \\ 0 \\ 0\end{pmatrix} \]
+
+\noindent\textbf{2.} $V=M_{2\times2}$, $\langle A,B\rangle=\mathrm{tr}(B^TA)=\sum a_{ij}b_{ij}$
+\begin{align*}
+\|u\|&=\sqrt{\langle u,u\rangle}=\sqrt{39} \\
+\|v\|&=\sqrt{\langle v,v\rangle}=\sqrt{116}=2 \sqrt{29} \\
+\langle u,v\rangle&=56 \\
+d(u,v)&=\|u-v\|=\sqrt{43} \\
+\cos\theta&=\frac{\langle u,v\rangle}{\|u\|\|v\|}=\frac{28 \sqrt{1131}}{1131}\ \Rightarrow\ \theta=\arccos{\left(\frac{28 \sqrt{1131}}{1131} \right)}\approx 33.64^\circ
+\end{align*}
+$\langle u,v\rangle=56\neq0$, so $u,v$ are \textbf{not orthogonal} (hence not orthonormal).
+\[ \mathrm{proj}_v u=\frac{\langle u,v\rangle}{\langle v,v\rangle}v=\frac{14}{29}\,v=\begin{pmatrix}\frac{56}{29} & \frac{84}{29} \\ 0 & \frac{112}{29}\end{pmatrix},\qquad \mathrm{proj}_u v=\frac{\langle v,u\rangle}{\langle u,u\rangle}u=\frac{56}{39}\,u=\begin{pmatrix}\frac{56}{39} & \frac{112}{39} \\ - \frac{56}{13} & \frac{280}{39}\end{pmatrix} \]
+
+\noindent\textbf{3.} $V=P_2(t)$, $\langle a_0+a_1t+a_2t^2,\,b_0+b_1t+b_2t^2\rangle=a_0b_0+a_1b_1+a_2b_2$
+\begin{align*}
+\|u\|&=\sqrt{\langle u,u\rangle}=\sqrt{11} \\
+\|v\|&=\sqrt{\langle v,v\rangle}=\sqrt{29} \\
+\langle u,v\rangle&=11 \\
+d(u,v)&=\|u-v\|=\sqrt{18}=3 \sqrt{2} \\
+\cos\theta&=\frac{\langle u,v\rangle}{\|u\|\|v\|}=\frac{\sqrt{319}}{29}\ \Rightarrow\ \theta=\arccos{\left(\frac{\sqrt{319}}{29} \right)}\approx 51.98^\circ
+\end{align*}
+$\langle u,v\rangle=11\neq0$, so $u,v$ are \textbf{not orthogonal} (hence not orthonormal).
+\[ \mathrm{proj}_v u=\frac{\langle u,v\rangle}{\langle v,v\rangle}v=\frac{11}{29}\,v=\frac{55 t^{2}}{29} + \frac{22}{29},\qquad \mathrm{proj}_u v=\frac{\langle v,u\rangle}{\langle u,u\rangle}u=1\,u=t^{2} - t + 3 \]
+
+\noindent\textbf{4.} $V=C[-1,1]$, $\langle f,g\rangle=\int_{-1}^{1}f(x)g(x)\,dx$
+\begin{align*}
+\|u\|&=\sqrt{\langle u,u\rangle}=\sqrt{\frac{8}{3}}=\frac{2 \sqrt{6}}{3} \\
+\|v\|&=\sqrt{\langle v,v\rangle}=\sqrt{\frac{16}{15}}=\frac{4 \sqrt{15}}{15} \\
+\langle u,v\rangle&=0 \\
+d(u,v)&=\|u-v\|=\sqrt{\frac{56}{15}}=\frac{2 \sqrt{210}}{15} \\
+\cos\theta&=\frac{\langle u,v\rangle}{\|u\|\|v\|}=0\ \Rightarrow\ \theta=\frac{\pi}{2}\approx 90.00^\circ
+\end{align*}
+$\langle u,v\rangle=0$, so $u,v$ are \textbf{orthogonal}, but not orthonormal (not both unit vectors).
+\[ \mathrm{proj}_v u=\frac{\langle u,v\rangle}{\langle v,v\rangle}v=0\,v=0,\qquad \mathrm{proj}_u v=\frac{\langle v,u\rangle}{\langle u,u\rangle}u=0\,u=0 \]
+
+\noindent\textbf{5.} $V=C[0,1]$, $\langle f,g\rangle=\int_0^1f(x)g(x)\,dx$
+\begin{align*}
+\|u\|&=\sqrt{\langle u,u\rangle}=\sqrt{\frac{1}{2}}=\frac{\sqrt{2}}{2} \\
+\|v\|&=\sqrt{\langle v,v\rangle}=\sqrt{\frac{1}{2}}=\frac{\sqrt{2}}{2} \\
+\langle u,v\rangle&=0 \\
+d(u,v)&=\|u-v\|=\sqrt{1}=1 \\
+\cos\theta&=\frac{\langle u,v\rangle}{\|u\|\|v\|}=0\ \Rightarrow\ \theta=\frac{\pi}{2}\approx 90.00^\circ
+\end{align*}
+$\langle u,v\rangle=0$, so $u,v$ are \textbf{orthogonal}, but not orthonormal (not both unit vectors).
+\[ \mathrm{proj}_v u=\frac{\langle u,v\rangle}{\langle v,v\rangle}v=0\,v=0,\qquad \mathrm{proj}_u v=\frac{\langle v,u\rangle}{\langle u,u\rangle}u=0\,u=0 \]
+\medskip\noindent\textbf{Q.3--Q.8  Norms of linear combinations}\par\smallskip
+Use $\|au+bv+cw\|^2=a^2\|u\|^2+b^2\|v\|^2+c^2\|w\|^2+2ab\langle u,v\rangle+2ac\langle u,w\rangle+2bc\langle v,w\rangle$.
+
+\noindent\textbf{Q.3} $\|2u-v+3w\|^2=4(4)+1(9)+9(16)+2(-2)(3)+2(6)(-2)+2(-3)(5)=103$, so $\|2u-v+3w\|=\sqrt{103}=\sqrt{103}$.
+
+
+\noindent\textbf{Q.4} $\|3u+2v-w\|^2=9(1)+4(4)+1(9)+2(6)(1)+2(-3)(2)+2(-2)(-1)=38$, so $\|3u+2v-w\|=\sqrt{38}=\sqrt{38}$.
+
+
+\noindent\textbf{Q.5} $\|u-2v+2w\|^2=1(9)+4(16)+4(25)+2(-2)(6)+2(2)(3)+2(-4)(-4)=193$, so $\|u-2v+2w\|=\sqrt{193}=\sqrt{193}$.
+
+
+\noindent\textbf{Q.6} $\|2u+3v-w\|^2=4(4)+9(1)+1(9)+2(6)(-1)+2(-2)(4)+2(-3)(2)=-6$, so $\|2u+3v-w\|=\sqrt{-6}=\sqrt{6} i$.
+
+
+\noindent\textbf{Q.7} $\|4u-v+2w\|^2=16(1)+1(9)+4(4)+2(-4)(2)+2(8)(-1)+2(-2)(3)=-3$, so $\|4u-v+2w\|=\sqrt{-3}=\sqrt{3} i$.
+
+
+\noindent\textbf{Q.8} $\|3u-2v+4w\|^2=9(4)+4(9)+16(16)+2(-6)(-2)+2(12)(3)+2(-8)(1)=408$, so $\|3u-2v+4w\|=\sqrt{408}=2 \sqrt{102}$.
+

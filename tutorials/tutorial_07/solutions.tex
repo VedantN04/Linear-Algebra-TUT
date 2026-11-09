@@ -1,0 +1,117 @@
+% Tutorial 7 solutions -- fix errors directly in this file.
+\subsection*{Solutions --- Tutorial No. 7}
+\medskip\noindent\textbf{Q.1  Linear or not?}\par\smallskip
+(Test: $T(u+v)=T(u)+T(v)$ and $T(cu)=cT(u)$; equivalently every component must be a linear homogeneous expression in the inputs.)
+\begin{description}[leftmargin=1.2cm,itemsep=2pt]
+\item[1.] \textbf{Not linear.} $T(1+1)=\log2\neq T(1)+T(1)=0$, so additivity fails (also $T(0)$ is undefined and $T(2\cdot1)\ne2T(1)$).
+\item[2.] \textbf{Not linear.} $T(c\mathbf x)=|c^2xy|=c^2|xy|\neq c\,T(\mathbf x)$; e.g. $T(1,1)=1$, $T(2,2)=4\neq2$.
+\item[3.] \textbf{Linear.} $T(\mathbf u+\mathbf v)=(x_1+x_2)+(y_1+y_2)=T(\mathbf u)+T(\mathbf v)$, $T(c\mathbf u)=c(x+y)$. Matrix $[1\ \ 1]$.
+\item[4.] \textbf{Linear.} Components $x+y,\ x$ are linear: matrix $\begin{pmatrix}1&1\\1&0\end{pmatrix}$.
+\item[5.] \textbf{Linear.} $T(x,y)=(x,0)$: matrix $\begin{pmatrix}1&0\\0&0\end{pmatrix}$ (projection on the $x$-axis).
+\item[6.] \textbf{Not linear.} $x^2$ is not linear: $T(2,0)=(4,0)\neq 2T(1,0)=(2,0)$.
+\item[7.] \textbf{Not linear.} $T(0,0)=(1,0,0)\neq\mathbf 0$; a linear map must send $\mathbf0$ to $\mathbf0$.
+\item[8.] \textbf{Not linear.} $|x|$ is not linear: $T(-1,0,0)=(1,0)\neq-T(1,0,0)=(-1,0)$.
+\item[9.] \textbf{Linear.} All components linear homogeneous: matrix $\begin{pmatrix}1&-1&2\\2&1&-1\\-1&-2&0\end{pmatrix}$.
+\item[10.] \textbf{Linear.} Matrix $\begin{pmatrix}0&1&1\\1&0&1\\1&1&0\end{pmatrix}$.
+\item[11.] \textbf{Not linear.} Constant map: $T(\mathbf0)=(1,2,3)\neq\mathbf0$.
+\item[12.] \textbf{Linear.} Matrix $\begin{pmatrix}2&0&-3\\1&-1&3\\0&1&1\\1&1&0\end{pmatrix}$ (all components linear homogeneous).
+\item[13.] \textbf{Linear.} Matrix $\begin{pmatrix}0&0\\1&-1\\0&1\\1&0\end{pmatrix}$.
+\item[14.] \textbf{Not linear.} $T(\mathbf 0)=1\neq0$ (the "$+1$" makes it affine, not linear).
+\item[15.] \textbf{Linear.} Matrix $\begin{pmatrix}1&0&0&0\\1&0&0&1\\0&1&1&0\\0&0&0&0\end{pmatrix}$.
+\end{description}
+\medskip\noindent\textbf{Q.2  Standard matrices}\par\smallskip
+The columns of $[T]$ are $T(e_1),T(e_2),\dots$, i.e. the coefficient matrix of the formula.
+
+\noindent\textbf{(1)} $[T]=\begin{pmatrix}0 & 1 & 1 \\ 0 & 2 & -1\end{pmatrix}$ (size $2\times3$).
+
+
+\noindent\textbf{(2)} $[T]=\begin{pmatrix}1 & -3 & 0 \\ 0 & 1 & 3 \\ 3 & 0 & 1 \\ 1 & 0 & -3\end{pmatrix}$ (size $4\times3$).
+
+
+\noindent\textbf{(3)} $[T]=\begin{pmatrix}1 & 1 & -1 \\ 0 & -1 & 1 \\ 1 & 8 & 1\end{pmatrix}$ (size $3\times3$).
+
+
+\noindent\textbf{(4)} $[T]=\begin{pmatrix}3 & 2 & 1 \\ 0 & 1 & -7\end{pmatrix}$ (size $2\times3$).
+
+
+\noindent\textbf{(5)} $[T]=\begin{pmatrix}1 & 0 \\ 0 & 1 \\ 0 & 1\end{pmatrix}$ (size $3\times2$).
+
+\medskip\noindent\textbf{Q.3}\par\smallskip
+$T(x,y,z)=xT(e_1)+yT(e_2)+zT(e_3)$, so $[T]=\begin{pmatrix}2 & 1 & 0 \\ 4 & 3 & -2 \\ -1 & -2 & 2\end{pmatrix}$ and
+\[ T(-2,4,-1)=-2\begin{pmatrix}2 \\ 4 \\ -1\end{pmatrix}+4\begin{pmatrix}1 \\ 3 \\ -2\end{pmatrix}-1\begin{pmatrix}0 \\ -2 \\ 2\end{pmatrix}=\begin{pmatrix}0 \\ 6 \\ -8\end{pmatrix} \]
+\medskip\noindent\textbf{Q.4}\par\smallskip
+$T(a,b,c)=aT(e_1)+bT(e_2)+cT(e_3)=a(1,1)+b(3,0)+c(4,-7)$, hence
+\[ T(a,b,c)=(a+3b+4c,\ a-7c),\qquad T(1,-2,3)=(1-6+12,\ 1-21)=(7,\,-20) \]
+\medskip\noindent\textbf{Q.5  Range, kernel, rank, nullity (maps of part (d), p.\,53)}\par\smallskip
+
+\noindent\textbf{(1)} $T:\mathbb{R}^2\to\mathbb{R}^2$, $[T]=\begin{pmatrix}2 & -1 \\ -8 & 4\end{pmatrix}$.
+\begin{itemize}
+\item RREF of $[T]$: $\begin{pmatrix}1 & - \frac{1}{2} \\ 0 & 0\end{pmatrix}$; pivot columns: 1.
+\item \textbf{Basis of range (column space):} $\Big\{\begin{pmatrix}2 \\ -8\end{pmatrix}\Big\}$.
+\item \textbf{Basis of kernel (null space):} $\Big\{\begin{pmatrix}\frac{1}{2} \\ 1\end{pmatrix}\Big\}$.
+\item \textbf{Rank} $=1$, \textbf{nullity} $=1$. Rank--Nullity: $1+1=2=\dim\mathbb{R}^2$ \checkmark.
+\item (d) one-to-one: \textbf{no} (kernel has dimension 1); onto: \textbf{no} (rank $1$ $<$ $\dim$ codomain $2$); not bijective.
+\end{itemize}
+
+\noindent\textbf{(2)} $T:\mathbb{R}^2\to\mathbb{R}^2$, $[T]=\begin{pmatrix}1 & 0 \\ 0 & 0\end{pmatrix}$.
+\begin{itemize}
+\item RREF of $[T]$: $\begin{pmatrix}1 & 0 \\ 0 & 0\end{pmatrix}$; pivot columns: 1.
+\item \textbf{Basis of range (column space):} $\Big\{\begin{pmatrix}1 \\ 0\end{pmatrix}\Big\}$.
+\item \textbf{Basis of kernel (null space):} $\Big\{\begin{pmatrix}0 \\ 1\end{pmatrix}\Big\}$.
+\item \textbf{Rank} $=1$, \textbf{nullity} $=1$. Rank--Nullity: $1+1=2=\dim\mathbb{R}^2$ \checkmark.
+\item (d) one-to-one: \textbf{no} (kernel has dimension 1); onto: \textbf{no} (rank $1$ $<$ $\dim$ codomain $2$); not bijective.
+\end{itemize}
+
+\noindent\textbf{(3)} $T:\mathbb{R}^2\to\mathbb{R}^3$, $[T]=\begin{pmatrix}1 & 2 \\ 3 & 4 \\ 5 & 6\end{pmatrix}$.
+\begin{itemize}
+\item RREF of $[T]$: $\begin{pmatrix}1 & 0 \\ 0 & 1 \\ 0 & 0\end{pmatrix}$; pivot columns: 1, 2.
+\item \textbf{Basis of range (column space):} $\Big\{\begin{pmatrix}1 \\ 3 \\ 5\end{pmatrix},\ \begin{pmatrix}2 \\ 4 \\ 6\end{pmatrix}\Big\}$.
+\item \textbf{Kernel} $=\{\mathbf 0\}$ (no basis vectors; $T\mathbf x=\mathbf0$ only for $\mathbf x=\mathbf 0$).
+\item \textbf{Rank} $=2$, \textbf{nullity} $=0$. Rank--Nullity: $2+0=2=\dim\mathbb{R}^2$ \checkmark.
+\item (d) one-to-one: \textbf{yes} (kernel is trivial); onto: \textbf{no} (rank $2$ $<$ $\dim$ codomain $3$); not bijective.
+\end{itemize}
+
+\noindent\textbf{(4)} $T:\mathbb{R}^3\to\mathbb{R}^3$, $[T]=\begin{pmatrix}1 & 1 & 1 \\ 1 & 2 & 3 \\ 1 & 4 & 9\end{pmatrix}$.
+\begin{itemize}
+\item RREF of $[T]$: $\begin{pmatrix}1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1\end{pmatrix}$; pivot columns: 1, 2, 3.
+\item \textbf{Basis of range (column space):} $\Big\{\begin{pmatrix}1 \\ 1 \\ 1\end{pmatrix},\ \begin{pmatrix}1 \\ 2 \\ 4\end{pmatrix},\ \begin{pmatrix}1 \\ 3 \\ 9\end{pmatrix}\Big\}$.
+\item \textbf{Kernel} $=\{\mathbf 0\}$ (no basis vectors; $T\mathbf x=\mathbf0$ only for $\mathbf x=\mathbf 0$).
+\item \textbf{Rank} $=3$, \textbf{nullity} $=0$. Rank--Nullity: $3+0=3=\dim\mathbb{R}^3$ \checkmark.
+\item (d) one-to-one: \textbf{yes} (kernel is trivial); onto: \textbf{yes} (rank $3$ $=$ $\dim$ codomain $3$); \textbf{bijective}.
+\end{itemize}
+
+\noindent\textbf{(5)} $T:\mathbb{R}^3\to\mathbb{R}^3$, $[T]=\begin{pmatrix}1 & 2 & -1 \\ 0 & 1 & 1 \\ 1 & 1 & -2\end{pmatrix}$.
+\begin{itemize}
+\item RREF of $[T]$: $\begin{pmatrix}1 & 0 & -3 \\ 0 & 1 & 1 \\ 0 & 0 & 0\end{pmatrix}$; pivot columns: 1, 2.
+\item \textbf{Basis of range (column space):} $\Big\{\begin{pmatrix}1 \\ 0 \\ 1\end{pmatrix},\ \begin{pmatrix}2 \\ 1 \\ 1\end{pmatrix}\Big\}$.
+\item \textbf{Basis of kernel (null space):} $\Big\{\begin{pmatrix}3 \\ -1 \\ 1\end{pmatrix}\Big\}$.
+\item \textbf{Rank} $=2$, \textbf{nullity} $=1$. Rank--Nullity: $2+1=3=\dim\mathbb{R}^3$ \checkmark.
+\item (d) one-to-one: \textbf{no} (kernel has dimension 1); onto: \textbf{no} (rank $2$ $<$ $\dim$ codomain $3$); not bijective.
+\end{itemize}
+
+\noindent\textbf{(6)} $T:\mathbb{R}^4\to\mathbb{R}^3$, $[T]=\begin{pmatrix}1 & 1 & 1 & 1 \\ 5 & 5 & 5 & 6 \\ 3 & 3 & 3 & 3\end{pmatrix}$.
+\begin{itemize}
+\item RREF of $[T]$: $\begin{pmatrix}1 & 1 & 1 & 0 \\ 0 & 0 & 0 & 1 \\ 0 & 0 & 0 & 0\end{pmatrix}$; pivot columns: 1, 4.
+\item \textbf{Basis of range (column space):} $\Big\{\begin{pmatrix}1 \\ 5 \\ 3\end{pmatrix},\ \begin{pmatrix}1 \\ 6 \\ 3\end{pmatrix}\Big\}$.
+\item \textbf{Basis of kernel (null space):} $\Big\{\begin{pmatrix}-1 \\ 1 \\ 0 \\ 0\end{pmatrix},\ \begin{pmatrix}-1 \\ 0 \\ 1 \\ 0\end{pmatrix}\Big\}$.
+\item \textbf{Rank} $=2$, \textbf{nullity} $=2$. Rank--Nullity: $2+2=4=\dim\mathbb{R}^4$ \checkmark.
+\item (d) one-to-one: \textbf{no} (kernel has dimension 2); onto: \textbf{no} (rank $2$ $<$ $\dim$ codomain $3$); not bijective.
+\end{itemize}
+
+\noindent\textbf{(7)} $T:\mathbb{R}^3\to\mathbb{R}^4$, $[T]=\begin{pmatrix}1 & 1 & 1 \\ 1 & 2 & -3 \\ 2 & 3 & -2 \\ 3 & 4 & -1\end{pmatrix}$.
+\begin{itemize}
+\item RREF of $[T]$: $\begin{pmatrix}1 & 0 & 5 \\ 0 & 1 & -4 \\ 0 & 0 & 0 \\ 0 & 0 & 0\end{pmatrix}$; pivot columns: 1, 2.
+\item \textbf{Basis of range (column space):} $\Big\{\begin{pmatrix}1 \\ 1 \\ 2 \\ 3\end{pmatrix},\ \begin{pmatrix}1 \\ 2 \\ 3 \\ 4\end{pmatrix}\Big\}$.
+\item \textbf{Basis of kernel (null space):} $\Big\{\begin{pmatrix}-5 \\ 4 \\ 1\end{pmatrix}\Big\}$.
+\item \textbf{Rank} $=2$, \textbf{nullity} $=1$. Rank--Nullity: $2+1=3=\dim\mathbb{R}^3$ \checkmark.
+\item (d) one-to-one: \textbf{no} (kernel has dimension 1); onto: \textbf{no} (rank $2$ $<$ $\dim$ codomain $4$); not bijective.
+\end{itemize}
+
+\noindent\textbf{(8)} $T:\mathbb{R}^3\to\mathbb{R}^3$, $[T]=\begin{pmatrix}2 & 0 & -1 \\ 4 & 0 & -2 \\ 0 & 0 & 0\end{pmatrix}$.
+\begin{itemize}
+\item RREF of $[T]$: $\begin{pmatrix}1 & 0 & - \frac{1}{2} \\ 0 & 0 & 0 \\ 0 & 0 & 0\end{pmatrix}$; pivot columns: 1.
+\item \textbf{Basis of range (column space):} $\Big\{\begin{pmatrix}2 \\ 4 \\ 0\end{pmatrix}\Big\}$.
+\item \textbf{Basis of kernel (null space):} $\Big\{\begin{pmatrix}0 \\ 1 \\ 0\end{pmatrix},\ \begin{pmatrix}\frac{1}{2} \\ 0 \\ 1\end{pmatrix}\Big\}$.
+\item \textbf{Rank} $=1$, \textbf{nullity} $=2$. Rank--Nullity: $1+2=3=\dim\mathbb{R}^3$ \checkmark.
+\item (d) one-to-one: \textbf{no} (kernel has dimension 2); onto: \textbf{no} (rank $1$ $<$ $\dim$ codomain $3$); not bijective.
+\end{itemize}

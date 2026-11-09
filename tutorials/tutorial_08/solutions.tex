@@ -1,0 +1,75 @@
+% Tutorial 8 solutions -- fix errors directly in this file.
+\subsection*{Solutions --- Tutorial No. 8}
+\medskip\noindent\textbf{Q.1  Regular, singular, orthogonal}\par\smallskip
+A matrix is \emph{regular} (non-singular) if $\det A\neq0$, \emph{singular} if $\det A=0$, and \emph{orthogonal} if $A^TA=I$ (then $\det A=\pm1$, so it is also regular).
+
+\noindent\textbf{(1)} $A=\begin{pmatrix}\frac{\sqrt{2}}{2} & - \frac{\sqrt{2}}{2} \\ \frac{\sqrt{2}}{2} & \frac{\sqrt{2}}{2}\end{pmatrix}$: $\det A=1$, $A^TA=\begin{pmatrix}1 & 0 \\ 0 & 1\end{pmatrix}$. Since $A^TA=I$: \textbf{orthogonal} (and hence regular, $\det A=\pm1$).
+
+
+\noindent\textbf{(2)} $A=\begin{pmatrix}2 & 4 \\ 4 & 8\end{pmatrix}$: $\det A=0$, $A^TA=\begin{pmatrix}20 & 40 \\ 40 & 80\end{pmatrix}$. Since $\det A=0$: \textbf{singular} (not regular, not orthogonal).
+
+
+\noindent\textbf{(3)} $A=\begin{pmatrix}0 & 1 \\ 1 & 0\end{pmatrix}$: $\det A=-1$, $A^TA=\begin{pmatrix}1 & 0 \\ 0 & 1\end{pmatrix}$. Since $A^TA=I$: \textbf{orthogonal} (and hence regular, $\det A=\pm1$).
+
+
+\noindent\textbf{(4)} $A=\begin{pmatrix}-1 & 0 & 0 \\ 0 & -1 & 0 \\ 0 & 0 & 1\end{pmatrix}$: $\det A=1$, $A^TA=\begin{pmatrix}1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1\end{pmatrix}$. Since $A^TA=I$: \textbf{orthogonal} (and hence regular, $\det A=\pm1$).
+
+
+\noindent\textbf{(5)} $A=\begin{pmatrix}\frac{\sqrt{3}}{3} & 0 & \frac{\sqrt{6}}{3} \\ \frac{\sqrt{3}}{3} & \frac{\sqrt{2}}{2} & - \frac{\sqrt{6}}{6} \\ - \frac{\sqrt{3}}{3} & \frac{\sqrt{2}}{2} & \frac{\sqrt{6}}{6}\end{pmatrix}$: $\det A=1$, $A^TA=\begin{pmatrix}1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1\end{pmatrix}$. Since $A^TA=I$: \textbf{orthogonal} (and hence regular, $\det A=\pm1$).
+
+\medskip\noindent\textbf{Q.2  Composition $T_2\circ T_1$}\par\smallskip
+$T_2\circ T_1$ is defined when the co-domain of $T_1$ equals the domain of $T_2$; then domain $=$ domain of $T_1$, co-domain $=$ co-domain of $T_2$, and $(T_2\circ T_1)(v)=T_2(T_1(v))$.
+
+\noindent\textbf{a)} $T_1:\mathbb{R}^2\to\mathbb{R}^2$, $T_2:\mathbb{R}^2\to\mathbb{R}^2$. Domain of $T_2\circ T_1$: $\mathbb{R}^2$; co-domain: $\mathbb{R}^2$.
+\[ (T_2\circ T_1)(x,y)=T_2(2 x,\,3 y)=(2 x - 3 y,\,2 x + 3 y) \]
+
+\noindent\textbf{b)} $T_1:\mathbb{R}^2\to\mathbb{R}^2$, $T_2:\mathbb{R}^2\to\mathbb{R}^2$. Domain of $T_2\circ T_1$: $\mathbb{R}^2$; co-domain: $\mathbb{R}^2$.
+\[ (T_2\circ T_1)(x,y)=T_2(x - 3 y,\,0)=(4 x - 12 y,\,3 x - 9 y) \]
+
+\noindent\textbf{c)} $T_1:\mathbb{R}^3\to\mathbb{R}^2$, $T_2:\mathbb{R}^2\to\mathbb{R}^2$. Domain of $T_2\circ T_1$: $\mathbb{R}^3$; co-domain: $\mathbb{R}^2$.
+\[ (T_2\circ T_1)(x,y,z)=T_2(x - y,\,y + z)=(2 x - 5 y - 3 z,\,x + z) \]
+
+\noindent\textbf{d)} $T_1:\mathbb{R}^3\to\mathbb{R}^3$, $T_2:\mathbb{R}^3\to\mathbb{R}^2$. Domain of $T_2\circ T_1$: $\mathbb{R}^3$; co-domain: $\mathbb{R}^2$.
+\[ (T_2\circ T_1)(x,y,z)=T_2(x - y,\,y + z,\,x - z)=(0,\,2 x) \]
+\medskip\noindent\textbf{Q.3  Composition $T_3\circ T_2\circ T_1$}\par\smallskip
+
+\noindent\textbf{a)} $T_1:\mathbb{R}^2\to\mathbb{R}^3$, $T_2:\mathbb{R}^3\to\mathbb{R}^3$, $T_3:\mathbb{R}^3\to\mathbb{R}^2$; domain of $T_3\circ T_2\circ T_1$ is $\mathbb{R}^2$, co-domain $\mathbb{R}^2$.
+\[ T_1(x,y)=(- 2 y,\,3 x,\,x - 2 y),\quad T_2T_1(x,y)=(3 x,\,x - 2 y,\,- 2 y),\quad (T_3T_2T_1)(x,y)=(3 x - 2 y,\,x) \]
+
+\noindent\textbf{b)} $T_1:\mathbb{R}^2\to\mathbb{R}^3$, $T_2:\mathbb{R}^3\to\mathbb{R}^3$, $T_3:\mathbb{R}^3\to\mathbb{R}^2$; domain of $T_3\circ T_2\circ T_1$ is $\mathbb{R}^2$, co-domain $\mathbb{R}^2$.
+\[ T_1(x,y)=(x + y,\,y,\,- x),\quad T_2T_1(x,y)=(0,\,2 y,\,3 y),\quad (T_3T_2T_1)(x,y)=(4 y,\,6 y) \]
+\medskip\noindent\textbf{Q.4  Reflections}\par\smallskip
+Matrices: x-axis $\begin{pmatrix}1&0\\0&-1\end{pmatrix}$, y-axis $\begin{pmatrix}-1&0\\0&1\end{pmatrix}$, line $y=x$: $\begin{pmatrix}0&1\\1&0\end{pmatrix}$, line $y=-x$: $\begin{pmatrix}0&-1\\-1&0\end{pmatrix}$; image $=M\,\mathbf v$ (matrix multiplication verifies each image).
+
+
+\noindent\textbf{i. Reflection in the $x$-axis}, $M=\begin{pmatrix}1 & 0 \\ 0 & -1\end{pmatrix}$:
+$T(3,\,5)=(3,\,-5);\quad T(2,\,-1)=(2,\,1);\quad T(- a,\,0)=(- a,\,0);\quad T(0,\,b)=(0,\,- b);\quad T(- c,\,d)=(- c,\,- d);\quad T(f,\,- g)=(f,\,g)$.
+
+
+\noindent\textbf{ii. Reflection in the $y$-axis}, $M=\begin{pmatrix}-1 & 0 \\ 0 & 1\end{pmatrix}$:
+$T(2,\,5)=(-2,\,5);\quad T(-4,\,-1)=(4,\,-1);\quad T(a,\,0)=(- a,\,0);\quad T(0,\,- b)=(0,\,- b);\quad T(c,\,- d)=(- c,\,- d);\quad T(f,\,g)=(- f,\,g)$.
+
+
+\noindent\textbf{iii. Reflection in $y=x$}, $M=\begin{pmatrix}0 & 1 \\ 1 & 0\end{pmatrix}$:
+$T(0,\,1)=(1,\,0);\quad T(-1,\,3)=(3,\,-1);\quad T(a,\,b)=(b,\,a);\quad T(- a,\,b)=(b,\,- a);\quad T(- c,\,d)=(d,\,- c);\quad T(f,\,- g)=(- g,\,f)$.
+
+
+\noindent\textbf{iv. Reflection in $y=-x$}, $M=\begin{pmatrix}0 & -1 \\ -1 & 0\end{pmatrix}$:
+$T(-1,\,2)=(-2,\,1);\quad T(2,\,3)=(-3,\,-2);\quad T(a,\,0)=(0,\,- a);\quad T(0,\,b)=(- b,\,0);\quad T(e,\,- d)=(d,\,- e)$.
+
+\medskip\noindent\textbf{Q.5  Rotation of $(3,-4)$}\par\smallskip
+Rotation matrix $R_\theta=\begin{pmatrix}\cos\theta&-\sin\theta\\\sin\theta&\cos\theta\end{pmatrix}$.
+\[ \text{(a) }\theta=30^\circ:\ R=\begin{pmatrix}\frac{\sqrt{3}}{2} & - \frac{1}{2} \\ \frac{1}{2} & \frac{\sqrt{3}}{2}\end{pmatrix},\ R\begin{pmatrix}3\\-4\end{pmatrix}=\begin{pmatrix}2 + \frac{3 \sqrt{3}}{2} \\ \frac{3}{2} - 2 \sqrt{3}\end{pmatrix}\approx\begin{pmatrix}4.5981\\-1.9641\end{pmatrix} \]
+\[ \text{(b) }\theta=-60^\circ:\ R=\begin{pmatrix}\frac{1}{2} & \frac{\sqrt{3}}{2} \\ - \frac{\sqrt{3}}{2} & \frac{1}{2}\end{pmatrix},\ R\begin{pmatrix}3\\-4\end{pmatrix}=\begin{pmatrix}\frac{3}{2} - 2 \sqrt{3} \\ - \frac{3 \sqrt{3}}{2} - 2\end{pmatrix}\approx\begin{pmatrix}-1.9641\\-4.5981\end{pmatrix} \]
+\[ \text{(c) }\theta=45^\circ:\ R=\begin{pmatrix}\frac{\sqrt{2}}{2} & - \frac{\sqrt{2}}{2} \\ \frac{\sqrt{2}}{2} & \frac{\sqrt{2}}{2}\end{pmatrix},\ R\begin{pmatrix}3\\-4\end{pmatrix}=\begin{pmatrix}\frac{7 \sqrt{2}}{2} \\ - \frac{\sqrt{2}}{2}\end{pmatrix}\approx\begin{pmatrix}4.9497\\-0.7071\end{pmatrix} \]
+\[ \text{(d) }\theta=90^\circ:\ R=\begin{pmatrix}0 & -1 \\ 1 & 0\end{pmatrix},\ R\begin{pmatrix}3\\-4\end{pmatrix}=\begin{pmatrix}4 \\ 3\end{pmatrix}\approx\begin{pmatrix}4.0000\\3.0000\end{pmatrix} \]
+\medskip\noindent\textbf{Q.6  Composite operators on $\mathbb{R}^2$}\par\smallskip
+If $T_1$ is applied first and $T_2$ second, the standard matrix is $[T_2][T_1]$ (later maps on the left).
+\[ \text{(a) }[T]=\begin{pmatrix}0 & 1 \\ 1 & 0\end{pmatrix}\begin{pmatrix}0 & -1 \\ 1 & 0\end{pmatrix}=\begin{pmatrix}1 & 0 \\ 0 & -1\end{pmatrix},\quad [T]\begin{pmatrix}5 \\ 9\end{pmatrix}=\begin{pmatrix}5 \\ -9\end{pmatrix} \]
+\[ \text{(b) }[T]=\begin{pmatrix}3 & 0 \\ 0 & 3\end{pmatrix}\begin{pmatrix}1 & 0 \\ 0 & -1\end{pmatrix}=\begin{pmatrix}3 & 0 \\ 0 & -3\end{pmatrix},\quad [T]\begin{pmatrix}5 \\ 9\end{pmatrix}=\begin{pmatrix}15 \\ -27\end{pmatrix} \]
+\medskip\noindent\textbf{Q.7}\par\smallskip
+\[ \text{(a) }[T]=S\,F\,R_{60^\circ}=\begin{pmatrix}1 & 2 \\ 0 & 1\end{pmatrix}\begin{pmatrix}0 & 1 \\ 1 & 0\end{pmatrix}\begin{pmatrix}\frac{1}{2} & - \frac{\sqrt{3}}{2} \\ \frac{\sqrt{3}}{2} & \frac{1}{2}\end{pmatrix}=\begin{pmatrix}\frac{\sqrt{3}}{2} + 1 & \frac{1}{2} - \sqrt{3} \\ \frac{1}{2} & - \frac{\sqrt{3}}{2}\end{pmatrix} \]
+\[ [T]\begin{pmatrix}-1 \\ 4\end{pmatrix}=\begin{pmatrix}1 - \frac{9 \sqrt{3}}{2} \\ - 2 \sqrt{3} - \frac{1}{2}\end{pmatrix}\approx\begin{pmatrix}-6.7942 \\ -3.9641\end{pmatrix} \]
+\[ \text{(b) }[T]=R_{y\text{-axis}}\,R_{45^\circ}\,(2I)=\begin{pmatrix}-1 & 0 \\ 0 & 1\end{pmatrix}\begin{pmatrix}\frac{\sqrt{2}}{2} & - \frac{\sqrt{2}}{2} \\ \frac{\sqrt{2}}{2} & \frac{\sqrt{2}}{2}\end{pmatrix}\begin{pmatrix}2 & 0 \\ 0 & 2\end{pmatrix}=\begin{pmatrix}- \sqrt{2} & \sqrt{2} \\ \sqrt{2} & \sqrt{2}\end{pmatrix} \]
+\[ [T]\begin{pmatrix}-1 \\ 4\end{pmatrix}=\begin{pmatrix}5 \sqrt{2} \\ 3 \sqrt{2}\end{pmatrix}\approx\begin{pmatrix}7.0711 \\ 4.2426\end{pmatrix} \]
+\[ \text{(c) }[T]=R_{60^\circ}R_{105^\circ}R_{15^\circ}=R_{180^\circ}=\begin{pmatrix}-1 & 0 \\ 0 & -1\end{pmatrix},\quad [T]\begin{pmatrix}-1 \\ 4\end{pmatrix}=\begin{pmatrix}1 \\ -4\end{pmatrix} \]
